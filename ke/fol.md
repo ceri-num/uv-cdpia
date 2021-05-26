@@ -1,6 +1,6 @@
 # Logique des prédicats
 
-Avec la logique des prédicats (ou d'ordre 1) on passe un cran au dessus en terme d'expressivité des phrases, puisqu'il est possible d'exprimer, entre autre, la notion de variabilité dans une proposition, qui se nomme alors un **prédicat**. Incidemment, elle devient plus difficilement satisfiable.
+Avec la logique des prédicats (ou d'ordre 1) on passe un cran au dessus en terme d'expressivité des phrases, puisqu'il est possible d'exprimer, entre autre, la notion de variabilité dans une proposition, qui se nomme alors un **prédicat** (smullyan1995first). Incidemment, elle devient plus difficilement satisfiable.
 
 Avec cette logique, on peut totalement modéliser des systèmes complexes, capables d'exploiter une base de connaissances et de faits pour raisonner efficacement et produire de l'information.
 
@@ -62,34 +62,6 @@ De plus, une formule qui ne possède **que** des **variables liées** est appel�
 L'exemple ci-après illustre le célèbre syllogisme de Socrate, que l'on ne peut pas exprimer en *ZOL*.
 > $$\forall x \hspace{0.1cm}  (humain(socrate) \wedge (humain(x) \rightarrow mortel(x)))\rightarrow mortel(socrate)$$
 
-## Règles
-
-### Règles et inférences
-
-Dans la logique des prédicats, il est possible de dynamiquement augmenter la base de faits disponibles en s'appuyant sur des raisonnements adossés à des règles.
-
-Exemples :
-* $$\forall x \exists y \hspace{0.1cm} grandpere(y,x) \leftrightarrow \forall x\exists z, y \hspace{0.1cm} pere(z,x) \wedge pere(y,z)$$
-* $$\forall x \exists y \hspace{0.1cm} grandmere(y,x) \leftrightarrow \forall x\exists y \hspace{0.1cm} ancetre(y,x) \wedge femme(y)$$
-
-Aussi, si on sait que grandmere(Anna,Bob) (*i.e.* que Anna est la grand mère de Bob), on peut en déduire que Anna est une femme grâce à `femme(y)`, sans même l'avoir spécifié dans la base de fait. Autrement dit, on a **inférer** cette connaissance ! 
-
-{% hint style="success" %}
-Cette information peut venir enrichir la base de faits, et ensuite être utilisé dans des raisonnements *a postériori*.
-{% endhint %}
-
-### Quelques pièges
-
-Quand ont définit des règles/formules/énoncés il faut être prudent avec les implications qu'elles peuvent avoir. Autrement, l'on cours à des incohérences dans les faits.
-
-{% hint style="danger" %}
-Disons que $$\forall x \hspace{0.1cm} oiseau(x) \wedge ailes(x) \rightarrow vole(x)$$ ... et les pingouins dans cette histoire ?
-{% endhint %}
-
-Parmi les pièges les plus courants :
-* Créer des chemins de règles qui amène $$x$$ à être vrai quoi qu'il arrive (*i.e.* x est "tout") ;
-* Règles trop génériques, ou à l'inverse trop exclusives ;
-* Des règles insolubles nécessitant de $$x$$ d'être à la fois vrai et faux, afin que le prédicat soit vrai.
 
 ## Modèle
 
@@ -99,9 +71,85 @@ Un modèle du langage permet son interprétation en y décrivant les valeurs pri
 
 Un **modèle donne une valeur de vérité** (vrai ou faux) à toute formule close du langage. Les conditions de vérité sont définis par induction structurelle sur les formules. Par exemple, dans le modèle ci-contre :
 
-* $$\exists x \exists y \hspace{0.1cm} eat(x,y)$$ $$\leftarrow$$ FAUX (le "pellet" ne mange persone)
+* $$\forall x \exists y \hspace{0.1cm} eat(x,y)$$ $$\leftarrow$$ FAUX (le "pellet" ne mange persone)
 * $$\forall x \exists y \hspace{0.1cm} eat(y,x)$$ $$\leftarrow$$ VRAI (il y a toujours quelque chose qui est mangé)
 
 ## Raisonnement
 
-Fol \cite{smullyan1995first}
+### Règles
+
+Dans la logique des prédicats, il est possible de dynamiquement augmenter la base de faits disponibles en s'appuyant sur des raisonnements adossés à des règles.
+
+Exemples :
+* $$\forall x \exists y \hspace{0.1cm} grandpere(y,x) \leftrightarrow \forall x\exists z, y \hspace{0.1cm} pere(z,x) \wedge pere(y,z)$$
+* $$\forall x \exists y \hspace{0.1cm} grandmere(y,x) \leftrightarrow \forall x\exists y \hspace{0.1cm} ancetre(y,x) \wedge femme(y)$$
+
+Aussi, si on sait que `grandmere(Anna,Bob)̀  (*i.e.* que Anna est la grand mère de Bob), on peut en déduire que Anna est une femme grâce à `femme(y)`, sans même l'avoir spécifié dans la base de fait. Autrement dit, on a **inféré** cette connaissance ! 
+
+{% hint style="success" %}
+Cette information peut venir enrichir la base de faits, et ensuite être utilisée dans des raisonnements *a postériori*.
+{% endhint %}
+
+### Quelques pièges
+
+Quand ont définit des règles/formules/énoncés il faut être prudent avec les implications qu'elles peuvent avoir. Autrement, l'on cours à des incohérences dans les faits.
+
+{% hint style="danger" %}
+Disons que $$\forall x, \hspace{0.1cm} oiseau(x) \wedge ailes(x) \rightarrow vole(x)$$ ... et les pingouins dans cette histoire ?
+{% endhint %}
+
+Parmi les pièges les plus courants :
+* Créer des chemins de règles qui amène $$x$$ à être vrai quoi qu'il arrive (*i.e.* x est "tout") ;
+* Règles trop génériques, ou à l'inverse trop exclusives ;
+* Des règles insolubles nécessitant de $$x$$ d'être à la fois vrai et faux, afin que le prédicat soit vrai.
+
+### Inférence
+On l'a vu dans la [section précédente](Règles), il est possible de créer de l'information à partir de la base de faits et de règles. Ce mécanisme, communément appelé **inférence**, repose sur différents ressorts d'interprétation des connaissances à disposition du moteur d'inférence (induction, déduction, chaînage...).
+
+Le **chaînage** est un procédé puissant permettant d'exploiter au maximum les énoncés du modèle. À partir d'un ensemble d'énoncés initiaux et de faits, le moteur va faire croître sa base de faits en fonction des résultats, et recommencer l'application des règles jusqu'à ce qu'il n'y ait plus de changement entre deux itérations.
+
+*Exemple 1 (chaînage avant) :*
+> Soit les règles suivantes :
+> 
+> * $$\forall x \exists y, \hspace{0.1cm} grandmere(y,x) \leftrightarrow \forall x\exists y \hspace{0.1cm} ancetre(y,x) \wedge femme(y)$$
+> * $$\forall x, y \hspace{0.1cm} femme(x) \wedge homme(y) \wedge averageSmaller(y,x)$$
+> 
+> Et le fait suivants :
+> 
+> * `grandmere(Anna,Bob)`
+> * `homme(Bob)`
+> 
+> Avec un chaînage avant, on en déduit que Anna est une femme (`femme(y)`) **puis** que Anna est probablement plus petite que Bob.
+
+{% hint style="info" %}
+Le chaînage arrière fonctionne pareil, à la différence qu'au lieu de partir des prémices, l'on part des conclusions et on "remonte à l'envers" les règles.
+{% endhint %}
+
+*Exemple 2 (chaînage mixte):*
+> De tels inférences peuvent rapidement devenir utiles en situation réelle. Admettons que vous avez, sur une chaîne de production, cinq machines différentes (*i.e.* qui font des actions différentes) :
+> 
+> * `pli(b,c)`
+> * `cut(c,b)`
+> * `transform(a,b)`
+> * `livrable(c,b,d)`
+> * `livrable(e,d)`
+> 
+> Admettons aussi que votre produit final est `d`, et que, pour une raison ou pour une autre, une pénurie de ressources se manifeste et ne vous laisse plus que `a` comme matière première. En utilisant un chaînage mixte, vous savez que pour que `d` soit vrai, il vous faut $$(b \wedge d) \vee e$$. Avec un chaînage avant, vous savez qu'avec `a` vous pouvez produire `b`, et avec `b` produire `c`. Le process de production final déduit est alors :
+> 
+> transform $$\mapsto$$ pli $$\mapsto$$ livrable
+
+## Conclusion
+La **FOL** est utilisé dans des algorithmes d'**intelligence artificielle**, pour résoudre des **problèmes d'optimisation**, de **jeux**...
+    
+Elle donne aussi un cadre intéressant aux mécanismes d'inférences et de déduction pour produire de l'informations supplémentaires et du [DM](../dm/intro.md). C'est par exemple le cas avec les chaînages, comme on l'a vu juste avant.
+    
+C'est sur ces principes que la notion de **systèmes experts** est apparues (~1963). Il s'agit d'une implémentation informatique capable de simuler les mécanismes cognitifs d'un expert, dans un domaine particulier, pour répondre à des questions. 
+    
+Il y a des **avantages** et des **désavantages** à ces systèmes. Une petite liste
+
+| Pros   |  Cons  |
+|:----------:|:-------------:|
+| Explicabilité des résultats | recueil des connaissances complexe et fastidieux |
+| Complet | Semi-décidable |
+| Maintenance et évolution  | Un modèle volumineux peut devenir complexe à maintenir |
+| Humainement compréhensible | |
