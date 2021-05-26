@@ -1,7 +1,7 @@
 # Table des matières
 
-* [Introduction](README.md)
 * [Plan du module](outline.md)  
+* [Introduction](README.md)
 
 ## Introduction
 
