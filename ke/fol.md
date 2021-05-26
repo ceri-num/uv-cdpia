@@ -112,7 +112,7 @@ Le **chaînage** est un procédé puissant permettant d'exploiter au maximum les
 > Soit les règles suivantes :
 > 
 > * $$\forall x \exists y, \hspace{0.1cm} grandmere(y,x) \leftrightarrow \forall x\exists y \hspace{0.1cm} ancetre(y,x) \wedge femme(y)$$
-> * $$\forall x, y, \hspace{0.1cm} femme(x) \wedge homme(y) \wedge averageSmaller(y,x)$$
+> * $$\forall x, y, \hspace{0.1cm} femme(x) \wedge homme(y) \wedge averageSmaller(x,y)$$
 > 
 > Et le fait suivants :
 > 
