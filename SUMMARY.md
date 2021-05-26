@@ -30,3 +30,8 @@
 ## Mise en pratique
 
 * [Tutoriel](handson/tuto.md)
+
+## Annexes
+
+* [Glossaire](GLOSSARY.md)
+* [Références](REF.md)
