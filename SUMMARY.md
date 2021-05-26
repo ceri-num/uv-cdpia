@@ -13,12 +13,12 @@
 
 ## Ingénierie des connaissances ( *Knowledge Engineering | KE*)
 
-* [Introduction][ke/intro.md]
+* [Introduction](ke/intro.md)
 
 ## KE x DM : vers des systèmes de connaissances résilients
 
-* [Introduction][ke-x-dm/intro.md]
+* [Introduction](ke-x-dm/intro.md)
 
 ## Mise en pratique
 
-* [Introduction][handson/intro.md]
+* [Introduction](handson/intro.md)
