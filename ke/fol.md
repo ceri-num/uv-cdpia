@@ -23,8 +23,8 @@ Formellement, un prédicat se définit comme :
 
 {% hint style="danger" %}
 L'ordre des quantificateurs est important !
-* $$\forall x\exists y \hspace{0.1cm} x+1 > y$$
-* $$\exists y\forall x \hspace{0.1cm} x+1 > y$$ !! Jamais vrai 
+* $$\forall x\exists y \hspace{0.1cm} x^2+y < 0$$
+* $$\exists y\forall x \hspace{0.1cm} x^2+y > 0$$ !! Jamais vrai 
 {% endhint %}
 
 
@@ -59,7 +59,7 @@ De plus, une formule qui ne possède **que** des **variables liées** est appel�
 * Lorsqu'une variable est associée à un quantificateur (*e.g.* $$\forall x, P(x)$$), on dit qu'elle est liée ;
 * Inversement, lorsqu'une variable n'est pas associée à un quantificateur, on dit qu'elle est libre.
 
-L'exemple ci-après illustre le célèbre syllogisme de Socrate, que l'on ne peut pas expliquer en *ZOL*.
+L'exemple ci-après illustre le célèbre syllogisme de Socrate, que l'on ne peut pas exprimer en *ZOL*.
 > $$\forall x \hspace{0.1cm}  (humain(socrate) \wedge (humain(x) \rightarrow mortel(x)))\rightarrow mortel(socrate)$$
 
 ## Règles
