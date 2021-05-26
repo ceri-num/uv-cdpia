@@ -1,3 +1,7 @@
+---
+marp:true
+---
+
 # Logique propositionnelle (ou d'ordre 0)
 
 une proposition est une assertion ayant une valeur de vérité déterminable.
@@ -96,7 +100,7 @@ $$P \leftrightarrow Q$$ est équivalent à $$P \rightarrow Q \wedge Q \rightarro
 Cela peut se lire aussi comme $$P$$ est une condition nécessaire et suffisante à $$Q$$.
 {% endhint %}
 
-## Exemples théorique
+## Exemples théoriques
 
 ### Si... Alors... Sinon
 
@@ -110,14 +114,68 @@ On peut alors l'exprimer comme : $$(P\rightarrow Q)\vee(\lnot P \rightarrow R)$$
 
 ### Un exemple bien de chez nous
 
-Un français, de mauvais humeur, ça râle !
+Un français, de mauvaise humeur, ça râle !
 
-Soit **Français** $$\mapsto P$, **Humeur** $$\mapsto Q$$, Râler $$\mapsto R$$
+Soit **Français** $$\mapsto P$$, **Humeur** $$\mapsto Q$$, **Râler** $$\mapsto R$$
 
-On a alors $$(P \wedge \lnot Q) \rightarrow R$$ qui *tient*, en cela que cette proposition n'exclue que râler peut survenir dans d'autres situation, ou alors que d'autres nationalités le font également, par exemple. 
+On a alors $$(P \wedge \lnot Q) \rightarrow R$$ qui *tient*, en cela que cette proposition n'exclue que râler peut survenir dans d'autres situation, ou alors que d'autres nationalités ont propension à le faire également, par exemple. 
 
 {% hint style="danger" %}
 Alors que $$(P \wedge \lnot Q) \leftrightarrow R$$ signifie que râler est une propriété unique n'appartenant qu'aux français de mauvais humeur (puisque : $$((P \wedge \lnot Q) \rightarrow R) \wedge (R \rightarrow (P \wedge \lnot Q))$$.
 {% endhint %}
 
 ## Système déductif
+Grâce à la logique d'ordre 0, on peut d'ores et déjà envisager des systèmes déductifs à base de règles pour raisonner.
+
+### *Modus Ponen*
+Il s'agît d'une règle primitive de raisonnement faisant intervenir l'implication, que l'on nomme également *règle du détachement*. L'idée est de déduire la valeur de $$Q$$ d'après $$P$$ et l'implication de $$P$$ par rapport à $$Q$$.
+
+1. On à la proposition $$P \rightarrow Q$$, dîte **prémisse majeure** ;
+2. la proposition $$P$$, qualifiée de **prémisse mineure** ;
+3. et enfin $$Q$$, qui est la conclusion.
+
+Elle se note :
+
+$$
+    \begin{equation}
+        \frac{P \hspace{0.5cm} P \rightarrow Q}{Q}
+    \end{equation}
+$$
+
+Cela se lit de $$P$$ et de $$P \rightarrow Q$$ en est déduit $$Q$$. Autrement dit, en affirmant $$P\rightarrow Q$$ et $$P$$, l'on peut affirmer $$Q$$.
+
+{% hint style="danger" %}
+Quand on a dit $$P \rightarrow Q$$, on a pas dit $$P$$, ni $$Q$$ ; aussi, on ne connaît ni la valeur de vérité de $$P$$ et encore moins de $$Q$$. Si $$P$$ est ensuite posée à vraie, alors on peut en déduire que la proposition $$Q$$ est vraie également.
+{% endhint %}
+
+{% hint style="info" %}
+Il existe également la contraposée du *modus ponen*, le *modus tollen* (*i.e.* $$(\lnot P \wedge (\lnot P\rightarrow \lnot Q))\rightarrow Q$$).
+{% endhint %}
+
+### Syllogisme par Hypothèse
+Il s'agît d'exploiter les règles de détachement pour constituer des hypothèses et créer des implications simples pour réaliser ce qu'on appelle une démonstration en déduction naturelle.
+
+*Exemple*
+> "S'il fait beau ($$P$$) j'irai grimper cette après-midi ($$Q$$). Si je vais grimper cette après-midi ($$Q$$), je n'irai pas travailler ($$R$$). Donc, s'il fait beau je n'irai pas travailler."
+
+Ce qui s'exprime comme :
+
+$$
+    \begin{equation}
+        \frac{ \frac{P \hspace{0.5cm} P \rightarrow Q}{Q} \hspace{0.5cm} Q\rightarrow R}{R}
+    \end{equation}
+$$
+
+{% hint style="info" %}
+Une démonstration en déduction naturelle repose sur un arbre de preuve, comme ci dessus.
+{% endhint %}
+
+## Résumé
+
+Grâce à la logique de proposition, on commence déjà à **modéliser l'information** sous forme de propositions. Cela nous permet déja de raisonner avec ces propositions, et ainsi produire de la connaissance supplémentaire (*cf.* Modus Ponen).
+
+Néanmoins, la logique de proposition, comme son nom l'indique, ne permet pas d'exprimer de la variabilité.
+
+> Mon entreprise est en Europe
+
+Une telle proposition devient alors soit vraie, soit fausse, soit "indéterminée" (*e.g.* en Russie). L'on ne parle plus de proposition mais de **prédicat**.
