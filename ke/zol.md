@@ -1,7 +1,3 @@
----
-marp:true
----
-
 # Logique propositionnelle (ou d'ordre 0)
 
 une proposition est une assertion ayant une valeur de vérité déterminable.
@@ -132,7 +128,7 @@ Il s'agît d'une règle primitive de raisonnement faisant intervenir l'implicati
 
 1. On à la proposition $$P \rightarrow Q$$, dîte **prémisse majeure** ;
 2. la proposition $$P$$, qualifiée de **prémisse mineure** ;
-3. et enfin $$Q$$, qui est la conclusion.
+3. et enfin $$Q$$, qui est la **conclusion**.
 
 Elle se note :
 
