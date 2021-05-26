@@ -29,7 +29,7 @@ L'ordre d'application des connecteurs a une importance. Pour spécifier l'ordre,
 
 ### Conjonction
 
-| P   |  Q  | $$P \wedge Q$$ |
+| $$P$$   |  $$Q$$  | $$P \wedge Q$$ |
 |:----------:|:-------------:|:-------------:|
 | 0 | 0 | 0 | 
 | 0 | 1 | 0 |
@@ -38,7 +38,7 @@ L'ordre d'application des connecteurs a une importance. Pour spécifier l'ordre,
 
 ### Disjonction
 
-| P   |  Q  | $$P \vee Q$$ |
+| $$P$$   |  $$Q$$  | $$P \vee Q$$ |
 |:----------:|:-------------:|:-------------:|
 | 0 | 0 | 0 | 
 | 0 | 1 | 1 |
@@ -47,14 +47,14 @@ L'ordre d'application des connecteurs a une importance. Pour spécifier l'ordre,
 
 ### Négation
 
-| P   |  $$\lnot P$$ |
+| $$P$$   |  $$\lnot P$$ |
 |:----------:|:-------------:|
 | 0 | 1 | 
 | 1 | 0 |
 
 ### Implication
 
-| P   |  Q  | $$P \rightarrow Q$$ |
+| $$P$$   |  $$Q$$  | $$P \rightarrow Q$$ |
 |:----------:|:-------------:|:-------------:|
 | 0 | 0 | 1 | 
 | 0 | 1 | 0 |
@@ -79,7 +79,7 @@ Il neige donc le sol est blanc. La neige est une condition suffisante ($$P$$) d�
 
 ### Équivalence
 
-| P   |  Q  | $$P \leftrightarrow Q$$ |
+| $$P$$   |  $$Q$$  | $$P \leftrightarrow Q$$ |
 |:----------:|:-------------:|:-------------:|
 | 0 | 0 | 1 | 
 | 0 | 1 | 0 |
@@ -93,5 +93,31 @@ $$P \leftrightarrow Q$$ est équivalent à $$P \rightarrow Q \wedge Q \rightarro
 {% endhint %}
 
 {% hint style="success" %}
-Cela peut se lire aussi comme P est une condition nécessaire et suffisante à Q.
+Cela peut se lire aussi comme $$P$$ est une condition nécessaire et suffisante à $$Q$$.
 {% endhint %}
+
+## Exemples théorique
+
+### Si... Alors... Sinon
+
+**Si** $$P$$ **Alors** $$Q$$ **Sinon** $$R$$ est une structure ternaire, mais décomposable avec les opérateurs vu ci-avant. 
+
+{% hint style="info" %}
+On a vue que $$P \rightarrow Q$$ permet d'exprimer la notion de **SI...ALORS**
+{% endhint %}
+
+On peut alors l'exprimer comme : $$(P\rightarrow Q)\vee(\lnot P \rightarrow R)$$
+
+### Un exemple bien de chez nous
+
+Un français, de mauvais humeur, ça râle !
+
+Soit **Français** $$\mapsto P$, **Humeur** $$\mapsto Q$$, Râler $$\mapsto R$$
+
+On a alors $$(P \wedge \lnot Q) \rightarrow R$$ qui *tient*, en cela que cette proposition n'exclue que râler peut survenir dans d'autres situation, ou alors que d'autres nationalités le font également, par exemple. 
+
+{% hint style="danger" %}
+Alors que $$(P \wedge \lnot Q) \leftrightarrow R$$ signifie que râler est une propriété unique n'appartenant qu'aux français de mauvais humeur (puisque : $$((P \wedge \lnot Q) \rightarrow R) \wedge (R \rightarrow (P \wedge \lnot Q))$$.
+{% endhint %}
+
+## Système déductif
