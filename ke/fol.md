@@ -104,7 +104,7 @@ Parmi les pièges les plus courants :
 * Des règles insolubles nécessitant de $$x$$ d'être à la fois vrai et faux, afin que le prédicat soit vrai.
 
 ### Inférence
-On l'a vu dans la [section précédente](fol.md/#Règles), il est possible de créer de l'information à partir de la base de faits et de règles. Ce mécanisme, communément appelé **inférence**, repose sur différents ressorts d'interprétation des connaissances à disposition du moteur d'inférence (induction, déduction, chaînage...).
+On l'a vu dans la [section précédente](fol.md/#regles), il est possible de créer de l'information à partir de la base de faits et de règles. Ce mécanisme, communément appelé **inférence**, repose sur différents ressorts d'interprétation des connaissances à disposition du moteur d'inférence (induction, déduction, chaînage...).
 
 Le **chaînage** est un procédé puissant permettant d'exploiter au maximum les énoncés du modèle. À partir d'un ensemble d'énoncés initiaux et de faits, le moteur va faire croître sa base de faits en fonction des résultats, et recommencer l'application des règles jusqu'à ce qu'il n'y ait plus de changement entre deux itérations.
 
