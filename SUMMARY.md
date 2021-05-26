@@ -1,8 +1,5 @@
 # Table des matières
 
-* [Plan du module](outline.md)  
-* [Introduction](README.md)
-
 ## Introduction
 
 * [Introduction](intro/intro.md)
@@ -10,6 +7,10 @@
 ## Aide à la décision ( *Decision Making | DM*)
 
 * [Introduction](dm/intro.md)
+
+### DM basée traces
+* [Recherche Opérationnelle](dm/ro.md)
+* [DM basée sur les traces](dm/la.md)
 
 ## Ingénierie des connaissances ( *Knowledge Engineering | KE*)
 
