@@ -84,7 +84,7 @@ Exemples :
 * $$\forall x \exists y \hspace{0.1cm} grandpere(y,x) \leftrightarrow \forall x\exists z, y \hspace{0.1cm} pere(z,x) \wedge pere(y,z)$$
 * $$\forall x \exists y \hspace{0.1cm} grandmere(y,x) \leftrightarrow \forall x\exists y \hspace{0.1cm} ancetre(y,x) \wedge femme(y)$$
 
-Aussi, si on sait que `grandmere(Anna,Bob)̀  (*i.e.* que Anna est la grand mère de Bob), on peut en déduire que Anna est une femme grâce à `femme(y)`, sans même l'avoir spécifié dans la base de fait. Autrement dit, on a **inféré** cette connaissance ! 
+Aussi, si on sait que `grandmere(Anna,Bob)` (i.e.* que Anna est la grand mère de Bob), on peut en déduire que Anna est une femme grâce à `femme(y)`, sans même l'avoir spécifié dans la base de fait. Autrement dit, on a **inféré** cette connaissance ! 
 
 {% hint style="success" %}
 Cette information peut venir enrichir la base de faits, et ensuite être utilisée dans des raisonnements *a postériori*.
