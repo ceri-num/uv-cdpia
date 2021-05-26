@@ -22,7 +22,7 @@ Allons survoler un peu tout ça.
 | $$\lnot$$ | NON (**Négation**) |
 
 {% hint style="info" %}
-L'ordre d'application des connecteurs a une importance. Pour spécifier l'ordre, l'on utilise également les parenthèses ( et )
+L'ordre d'application des connecteurs a une importance. Pour spécifier l'ordre, l'on utilise également les parenthèses **(** et **)**
 {% endhint %}
 
 ## Table de vérité
@@ -67,15 +67,15 @@ $$P \rightarrow Q$$ est équivalent à $$(\lnot P \vee Q)$$.
 {% endhint %}
 
 Cette relation permet d'exprimer la relation **SI... ALORS**. Pour qu’il y ait implication, il faut donc au final que :
-* l’antécédent (ici P) soit une condition suffisante du conséquent ;
-* le conséquent (ici Q) soit une condition nécessaire de l’antécédent.
+* l’antécédent (ici $$P$$) soit une condition suffisante du conséquent ;
+* le conséquent (ici $$Q$$) soit une condition nécessaire de l’antécédent.
 
 {% hint style="success" %}
-Autrement on peut lire également pour que P, il suffit de Q. Autrement dit, du vrai n'implique jamais du faux, et du faux implique n'importe quoi.
+Autrement on peut lire également pour que $$P$$, il suffit de $$Q$$. Autrement dit, du vrai n'implique jamais du faux, et du faux implique n'importe quoi.
 {% endhint %}
 
 Exemple :
-Il neige donc le sol est blanc. La neige est une condition suffisante (P) d’un sol blanc. Il suffit qu’il neige pour que le sol soit blanc ($$P \rightarrow Q$$). Le sol blanc est une condition nécessaire (Q) de la neige. Il faut (nécessité) que le sol soit blanc pour qu’il neige. C’est nécessaire mais pas suffisant : si on a que cette information (le sol blanc), il ne neige pas forcément.
+Il neige donc le sol est blanc. La neige est une condition suffisante ($$P$$) d’un sol blanc. Il suffit qu’il neige pour que le sol soit blanc ($$P \rightarrow Q$$). Le sol blanc est une condition nécessaire ($$Q$$) de la neige. Il faut (nécessité) que le sol soit blanc pour qu’il neige. C’est nécessaire mais pas suffisant : si on a que cette information (le sol blanc), il ne neige pas forcément.
 
 ### Équivalence
 
