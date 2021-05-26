@@ -59,6 +59,9 @@ De plus, une formule qui ne possède **que** des **variables liées** est appel�
 * Lorsqu'une variable est associée à un quantificateur (*e.g.* $$\forall x, P(x)$$), on dit qu'elle est liée ;
 * Inversement, lorsqu'une variable n'est pas associée à un quantificateur, on dit qu'elle est libre.
 
+L'exemple ci-après illustre le célèbre syllogisme de Socrate, que l'on ne peut pas expliquer en *ZOL*.
+> $$\forall x \hspace{0.1cm}  (humain(socrate) \wedge (humain(x) \rightarrow mortel(x)))\rightarrow mortel(socrate)$$
+
 ## Règles
 pere <->
 
