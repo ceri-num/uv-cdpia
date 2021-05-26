@@ -13,7 +13,7 @@
 ## Ingénierie des connaissances ( *Knowledge Engineering | KE*)
 
 * [Introduction](ke/intro.md)
-* [Logique de proposition](ke/zol.md)
+* [Logique propositionnelle](ke/zol.md)
 * [Logique des prédicats](ke/fol.md)
 * [Logique flou](ke/fzl.md)
 * [Base de données](ke/bdd.md)
