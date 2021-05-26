@@ -114,7 +114,7 @@ On peut alors l'exprimer comme : $$(P\rightarrow Q)\vee(\lnot P \rightarrow R)$$
 
 Soit **Français** $$\mapsto P$$, **Humeur** $$\mapsto Q$$, **Râler** $$\mapsto R$$
 
-On a alors $$(P \wedge \lnot Q) \rightarrow R$$ qui *tient*, en cela que cette proposition n'exclue que râler peut survenir dans d'autres situation, ou alors que d'autres nationalités ont propension à le faire également, par exemple. 
+On a alors $$(P \wedge \lnot Q) \rightarrow R$$ qui *tient*, en cela que cette proposition n'exclue pas que râler peut survenir dans d'autres situation, ou alors que d'autres nationalités ont propension à le faire également, par exemple. 
 
 {% hint style="danger" %}
 Alors que $$(P \wedge \lnot Q) \leftrightarrow R$$ signifie que râler est une propriété unique n'appartenant qu'aux français de mauvais humeur (puisque : $$((P \wedge \lnot Q) \rightarrow R) \wedge (R \rightarrow (P \wedge \lnot Q))$$.
