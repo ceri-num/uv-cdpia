@@ -84,7 +84,7 @@ Exemples :
 * $$\forall x \exists y \hspace{0.1cm} grandpere(y,x) \leftrightarrow \forall x\exists z, y \hspace{0.1cm} pere(z,x) \wedge pere(y,z)$$
 * $$\forall x \exists y \hspace{0.1cm} grandmere(y,x) \leftrightarrow \forall x\exists y \hspace{0.1cm} ancetre(y,x) \wedge femme(y)$$
 
-Aussi, si on sait que `grandmere(Anna,Bob)` (i.e.* que Anna est la grand mère de Bob), on peut en déduire que Anna est une femme grâce à `femme(y)`, sans même l'avoir spécifié dans la base de fait. Autrement dit, on a **inféré** cette connaissance ! 
+Aussi, si on sait que `grandmere(Anna,Bob)` (*i.e.* que Anna est la grand mère de Bob), on peut en déduire que Anna est une femme grâce à `femme(y)`, sans même l'avoir spécifié dans la base de fait. Autrement dit, on a **inféré** cette connaissance ! 
 
 {% hint style="success" %}
 Cette information peut venir enrichir la base de faits, et ensuite être utilisée dans des raisonnements *a postériori*.
@@ -104,7 +104,7 @@ Parmi les pièges les plus courants :
 * Des règles insolubles nécessitant de $$x$$ d'être à la fois vrai et faux, afin que le prédicat soit vrai.
 
 ### Inférence
-On l'a vu dans la [section précédente](Règles), il est possible de créer de l'information à partir de la base de faits et de règles. Ce mécanisme, communément appelé **inférence**, repose sur différents ressorts d'interprétation des connaissances à disposition du moteur d'inférence (induction, déduction, chaînage...).
+On l'a vu dans la [section précédente](fol.md/#Règles), il est possible de créer de l'information à partir de la base de faits et de règles. Ce mécanisme, communément appelé **inférence**, repose sur différents ressorts d'interprétation des connaissances à disposition du moteur d'inférence (induction, déduction, chaînage...).
 
 Le **chaînage** est un procédé puissant permettant d'exploiter au maximum les énoncés du modèle. À partir d'un ensemble d'énoncés initiaux et de faits, le moteur va faire croître sa base de faits en fonction des résultats, et recommencer l'application des règles jusqu'à ce qu'il n'y ait plus de changement entre deux itérations.
 
@@ -112,7 +112,7 @@ Le **chaînage** est un procédé puissant permettant d'exploiter au maximum les
 > Soit les règles suivantes :
 > 
 > * $$\forall x \exists y, \hspace{0.1cm} grandmere(y,x) \leftrightarrow \forall x\exists y \hspace{0.1cm} ancetre(y,x) \wedge femme(y)$$
-> * $$\forall x, y \hspace{0.1cm} femme(x) \wedge homme(y) \wedge averageSmaller(y,x)$$
+> * $$\forall x, y, \hspace{0.1cm} femme(x) \wedge homme(y) \wedge averageSmaller(y,x)$$
 > 
 > Et le fait suivants :
 > 
@@ -149,7 +149,7 @@ Il y a des **avantages** et des **désavantages** à ces systèmes. Une petite l
 
 | Pros   |  Cons  |
 |:----------:|:-------------:|
-| Explicabilité des résultats | recueil des connaissances complexe et fastidieux |
+| Explicabilité des résultats | Recueil des connaissances complexe et fastidieux |
 | Complet | Semi-décidable |
 | Maintenance et évolution  | Un modèle volumineux peut devenir complexe à maintenir |
 | Humainement compréhensible | |
