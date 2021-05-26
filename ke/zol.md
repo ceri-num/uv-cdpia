@@ -78,8 +78,8 @@ Cette relation permet d'exprimer la relation **SI... ALORS**. Pour qu’il y ait
 Autrement on peut lire également pour que $$P$$, il suffit de $$Q$$. Autrement dit, du vrai n'implique jamais du faux, et du faux implique n'importe quoi.
 {% endhint %}
 
-Exemple :
-Il neige donc le sol est blanc. La neige est une condition suffisante ($$P$$) d’un sol blanc. Il suffit qu’il neige pour que le sol soit blanc ($$P \rightarrow Q$$). Le sol blanc est une condition nécessaire ($$Q$$) de la neige. Il faut (nécessité) que le sol soit blanc pour qu’il neige. C’est nécessaire mais pas suffisant : si on a que cette information (le sol blanc), il ne neige pas forcément.
+*Exemple :*
+> Il neige donc le sol est blanc. La neige est une condition suffisante ($$P$$) d’un sol blanc. Il suffit qu’il neige pour que le sol soit blanc ($$P \rightarrow Q$$). Le sol blanc est une condition nécessaire ($$Q$$) de la neige. Il faut (nécessité) que le sol soit blanc pour qu’il neige. C’est nécessaire mais pas suffisant : si on a que cette information (le sol blanc), il ne neige pas forcément.
 
 ### Équivalence
 
@@ -114,7 +114,7 @@ On peut alors l'exprimer comme : $$(P\rightarrow Q)\vee(\lnot P \rightarrow R)$$
 
 ### Un exemple bien de chez nous
 
-Un français, de mauvaise humeur, ça râle !
+> Un français, de mauvaise humeur, ça râle !
 
 Soit **Français** $$\mapsto P$$, **Humeur** $$\mapsto Q$$, **Râler** $$\mapsto R$$
 
@@ -155,7 +155,7 @@ Il existe également la contraposée du *modus ponen*, le *modus tollen* (*i.e.*
 ### Syllogisme par Hypothèse
 Il s'agît d'exploiter les règles de détachement pour constituer des hypothèses et créer des implications simples pour réaliser ce qu'on appelle une démonstration en déduction naturelle.
 
-*Exemple*
+*Exemple :*
 > "S'il fait beau ($$P$$) j'irai grimper cette après-midi ($$Q$$). Si je vais grimper cette après-midi ($$Q$$), je n'irai pas travailler ($$R$$). Donc, s'il fait beau je n'irai pas travailler."
 
 Ce qui s'exprime comme :
@@ -176,6 +176,8 @@ Grâce à la logique de proposition, on commence déjà à **modéliser l'inform
 
 Néanmoins, la logique de proposition, comme son nom l'indique, ne permet pas d'exprimer de la variabilité.
 
+La phrase suivante n'est pas une proposition par exemple :
+
 > Mon entreprise est en Europe
 
-Une telle proposition devient alors soit vraie, soit fausse, soit "indéterminée" (*e.g.* en Russie). L'on ne parle plus de proposition mais de **prédicat**.
+En effet, en fonction de l'entreprise, une telle proposition devient alors soit vraie, soit fausse, soit "indéterminée" (*e.g.* en Russie). L'on ne parle plus de proposition mais de **prédicat**.
