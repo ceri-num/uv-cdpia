@@ -40,8 +40,8 @@ Avec cette approche, les informations deviennent humainement interprétables. Il
 
 Pour pouvoir faire de la logique avec ces ensembles, il faut définir nos connecteurs. Comme spécifié dans l'[Introduction](fzl.md/#introduction), les connecteurs ne sont plus universel. Aussi, accordons nous sur leur définition :
 
-* **AND** $$\approx$$ $$min(m_s_i(x),m_s_j(x))$$
-* **OR** $$\approx$$ $$max(m_s_i(x),m_s_j(x))$$
+* **AND** $$\approx$$ $$min(m_{s_i}(x),m_{s_j}(x))$$
+* **OR** $$\approx$$ $$max(m_{s_i}(x),m_{s_j}(x))$$
 
 Maintenant que nos connecteurs sont définis, on a tout le pipeline nécessaire pour réaliser de la logique flou :
 
