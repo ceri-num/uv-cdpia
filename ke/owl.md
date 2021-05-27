@@ -112,7 +112,6 @@ Bien qu'on puisse dire que la portée est unique, cela n'empêche pas d'exprimer
 {% endhint %}
 
 Exemple :
-
 > ```rdf
 > <owl:Class rdf:ID="VintageYear" />
 > 
@@ -130,37 +129,46 @@ Bien que la différence soit ténue, être fonctionnelle n'est pas pareil que de
 
 ### Inverse de
 
-Si une propriété $$P1$$ est spécifiée comme l'inverse de $$P2$$, alors $\forall x, y$ on a : $$P1(x,y) \leftrightarrow P2(y,x)$$.
+Si une propriété $$P1$$ est spécifiée comme l'inverse de $$P2$$, alors $$\forall x, y$$ on a : $$P1(x,y) \leftrightarrow P2(y,x)$$.
 
 Autrement dit, on sait que si $$P1$$ est vraie, alors $$P2$$ l'est elle aussi.
 
 *Exemple :*
-
->```rdf
-><owl:ObjectProperty rdf:ID="hasMaker">
->  <rdf:type rdf:resource="&owl;FunctionalProperty" />
-></owl:ObjectProperty>
->  
-><owl:ObjectProperty rdf:ID="producesWine">
->  <owl:inverseOf rdf:resource="#hasMaker" />
-></owl:ObjectProperty>
->```
+> ```rdf
+> <owl:ObjectProperty rdf:ID="hasMaker">
+>   <rdf:type rdf:resource="&owl;FunctionalProperty" />
+> </owl:ObjectProperty>
+>   
+> <owl:ObjectProperty rdf:ID="producesWine">
+>   <owl:inverseOf rdf:resource="#hasMaker" />
+> </owl:ObjectProperty>
+> ```
 > Ici, les vins ont des vignerons qui les fabriquent (dans la définition de `Wine` elle est restreinte aux vignerons `Winerys`). On indique ensuite que `producesWin` est l'inverse `hasMaker` (d'être produit par).
 
 ### Fonctionnelle Inverse
 
-```rdf
-<owl:ObjectProperty rdf:ID="hasMaker" />
-  
-<owl:ObjectProperty rdf:ID="producesWine">
-  <rdf:type rdf:resource="&owl;InverseFunctionalProperty" />
-  <owl:inverseOf rdf:resource="#hasMaker" />
-</owl:ObjectProperty>                                     ¬ 
-```
+Si une propriété $$P$$ est spécifiée comme inverse fonctionnelle, alors $$\forall x, y, z$$ on a : $$P(y,x) \wedge P(z,x) \rightarrow y = z$$.
+
+Autrement dit, l'unicité sémantique s'établie sur le domaine de la relation, et non plus sur sa portée (à l'inverse de [Fonctionnelle](owl.md/#fonctionnelle)).
+
+{% hint style="warning" %}
+L'inverse d'une relation fonctionnelle doit toujours être qualifiée comme fonctionnelle inverse pour conserver afin de conserver la sémantique véhiculée.
+{% endhint %}
+
+*Exemple :*
+> ```rdf
+> <owl:ObjectProperty rdf:ID="hasMaker" />
+>   
+> <owl:ObjectProperty rdf:ID="producesWine">
+>   <rdf:type rdf:resource="&owl;InverseFunctionalProperty" />
+>   <owl:inverseOf rdf:resource="#hasMaker" />
+> </owl:ObjectProperty>                                     ¬ 
+> ```
+> Notez que dans cette exemple, la relation précédemment vue dans [Inverse de](owl/#inverse-de) est qualifiée comme fonctionnelle inverse. Puisqu'un vin ne peut être produit que par une seule entité, si pour un vin donné on se retrouve avec deux producteurs différents, cela veut dire que c'est forcément les mêmes.
 
 ## Représentation des ontologies
 
-RDF et rdfs
+RDF et rdfs et turtle
 
 ## Vers du web sémantique : Requêtage et "Endpoints"
 
