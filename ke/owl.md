@@ -63,21 +63,21 @@ Si une propriété $$P$$ est spécifiée comme **transitive**, alors $$\forall x
 Autrement dit, pour une même propriété, si il existe "un chemin de cette propriété" entre $$x$$ et $$z$$, alors cette propriété s'applique aussi entre $$x$$ et $$z$$.
 
 *Exemple :*
-```rdf
-<owl:ObjectProperty rdf:ID="locatedIn">
-  <rdf:type rdf:resource="&owl;TransitiveProperty" />
-  <rdfs:domain rdf:resource="&owl;Thing" />
-  <rdfs:range rdf:resource="#Region" />
-</owl:ObjectProperty>
-
-<Region rdf:ID="SantaCruzMountainsRegion">
-  <locatedIn rdf:resource="#CaliforniaRegion" />
-</Region>
-
-<Region rdf:ID="CaliforniaRegion">
-  <locatedIn rdf:resource="#USRegion" />
-</Region>
-```
+> ```rdf
+> <owl:ObjectProperty rdf:ID="locatedIn">
+>   <rdf:type rdf:resource="&owl;TransitiveProperty" />
+>   <rdfs:domain rdf:resource="&owl;Thing" />
+>   <rdfs:range rdf:resource="#Region" />
+> </owl:ObjectProperty>
+> 
+> <Region rdf:ID="SantaCruzMountainsRegion">
+>   <locatedIn rdf:resource="#CaliforniaRegion" />
+> </Region>
+> 
+> <Region rdf:ID="CaliforniaRegion">
+>   <locatedIn rdf:resource="#USRegion" />
+> </Region>
+> ```
 
 ### Symétrique
 
