@@ -58,3 +58,9 @@ Grâce à cela, on est capable de raisonner dans l'incertitude, et prendre des d
 {% hint style="warning" %}
 La qualité d'un modèle logique floue est reportée sur l'élaboration de ses ensembles flous et des fonctions d'appartenances associées. Il est des fois difficile de modéliser correctement ces fonctions dû à la complexité inhérente des concepts ; des fois il est possible de les éclater en sous concept.
 {% endhint %}
+
+## Ressources intéressantes
+Deux trois ressources intéressantes :
+
+* [Une introduction au niveau à la FZL](https://www.researchgate.net/publication/267041176_Introduction_a_La_Logique_Floue
+* [La logique floue de Zaddeh](http://www.geocities.ws/hhvillav/00000053.pdf)
