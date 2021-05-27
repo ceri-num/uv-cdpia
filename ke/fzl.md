@@ -9,6 +9,8 @@ Néanmoins, la plupart de ces logiques sont qualifiés de **crisp** (oui, oui, c
 
 Les ensembles flous et la logique floue s'établissent plutôt en rupture de toutes ces logiques *crisp*. L'idée est de travailler avec un interval **continue** de valeur, compris entre `[0;1]`, qui représente l'appartenance d'un concept à un ensemble donné.
 
+Intuitivement, pour comprendre le besoin, l'on peut se poser la question du tas de sable : À quel moment, en empilant un par un les grains de sables, l'on peut parler de **tas** de sable ? La logique floue apporte une modélisation mathématique à cette question.
+
 *Exemple :*
 > La variable `Bob` appartient à l'ensemble `grand`, *t.q.* grand(Bob), avec un **degré** de 0.67, et la variable `Anna` avec un degré de 0.35. Avec ces information, l'on peut commencer à faire du raisonnement.
 
@@ -24,4 +26,14 @@ Les connecteurs logiques ne sont plus définis universellement !
 
 ## Fuzzification
 
+Dans les grandes lignes, on définit $$s_1,\ldots ,s_n, n \in \mathbb{N}$$ comme des ensemble flous, t.q. $$s \in \mathcal{S}$$ (l'ensemble de nos ensembles flous). On définit également $$m_s$$, la fonction d'appartenance à l'ensemble flou (*membership function*) $$s$$* comme $$m:\mathbb{R} \mapsto [0;1]$$.
+
+La fonction de fuzzification $$\mu: x \mapsto [0;1]^n$$ consiste à prendre une variable x et la projeter dans nos ensembles flous, pour définir un degré d'appartenance pour chacun des ensembles.
+
+![Degré d’appartenance à des ensemble distinct de la variable mesurée. (©McGillUniv)](assets/fuzzy.png)
+
+Avec cette approche, les informations deviennent humainement interprétables. Il est même possible d'introduire des modificateurs sémantiques (*e.g.* peu, énormément,etc.).
+
 ## Pipeline de la FZL
+
+![Pipeline logique dans l’espace flou et defuzzyfication, par Ferhat Pakdamar](assets/Graphical-presentation-of-the-max-min-inference-method-with-crisp-inputs.png)
