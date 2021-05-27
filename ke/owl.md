@@ -108,7 +108,7 @@ Si une propriété $$P$$ est spécifiée comme fonctionnelle, alors $$\forall x,
 Autrement dit, si une propriété est fonctionnelle, le terme en portée est **"unique"**.
 
 {% hint style="info" %}
-Bien qu'on puisse dire que la portée est unique, cela n'empêche pas d'exprimer $$P(x,y)$$ et $$P(x,z)$$, au contraire. Si on sait que la `chocolatine` est une `viennoiserie`, mais pas le `petitPain`, que la fonction `mange` est fonctionnelle, et qu'on a un moment `mange(Bob,chocolatine)` puis plus tard `mange(Bob,petitPain)`, on en déduit que `chocolatine = petitPain` **ET** que `petitPain` est une `viennoiserie`. Pratique, en plus de mettre fin au conflit (on sait tous que la chocolatine est la vrai).
+Bien qu'on puisse dire que la portée est unique, cela n'empêche pas d'exprimer $$P(x,y)$$ et $$P(x,z)$$, au contraire. Si on sait que la `chocolatine` est une `viennoiserie`, mais pas le `petitPain`, que la fonction `mange` est fonctionnelle, et qu'on a un moment `mange(Bob,chocolatine)` puis plus tard `mange(Bob,petitPain)`, on en déduit que `chocolatine = petitPain` **ET** que `petitPain` est une `viennoiserie`. Pratique, en plus de mettre fin au conflit (on sait tous que la chocolatine est la vraie).
 {% endhint %}
 
 Exemple :
@@ -122,7 +122,11 @@ Exemple :
 >   <rdfs:range  rdf:resource="#VintageYear" />
 > </owl:ObjectProperty>
 > ```
-> In our wine ontology, \texttt{hasVintageYear} is functional. A wine has a unique vintage year. That is, a given individual \texttt{Vintage} can only be associated with a single year using the \texttt{hasVintageYear} property. It is not a requirement of a \texttt{owl:FunctionalProperty} that all elements of the domain have values.
+> Ici la fonction `hasVintageYear` (a un millésime) est fonctionnelle. Un vin ne peut avoir qu'un seul millésime, pas plus. Aussi, une entité `Vintage` ne pourra associée sémantiquement qu'à une seule année `VintageYear` via la relation `hasVintageYear`.
+
+{% hint style="danger" %}
+Bien que la différence soit ténue, être fonctionnelle n'est pas pareil que de limiter une entité à n'avoir une relation qu'avec une autre entité ! La fonctionnalité, c'est plutôt une "unicité sémantique de l'individualisation de la portée d'un prédicat".
+{% endhint %}
 
 ### Inverse de
 
