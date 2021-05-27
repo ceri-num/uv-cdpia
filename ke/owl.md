@@ -47,13 +47,13 @@ Ce n'est pas obligatoire d'attribuer à une relation une propriété, mais cela 
 Une relation peut donc avoir aucune, une ou plusieurs propriétés à la fois. Elles sont au nombres de 5 :
 
 * Transitive (`owl;TransitiveProperty`)
-* Symétrique (`owl;SymétricProperty`)
+* Symétrique (`owl;SymetricProperty`)
 * Fonctionnelle (`owl;FunctionalProperty`) 
 * Inverse de (`owl;inverseOf`)
 * Fonctionnelle Inverse (`owl;InverseFunctionalProperty`)
 
 {% hint style="info" %}
-Les exemples qui suivent proviennent tous de la [documentation officiel](https://www.w3.org/TR/2004/REC-owl-guide-20040210/#PropertyCharacteristics) concernant le Web Ontology Language (OWL) de la W3C
+Les exemples qui suivent proviennent tous de la [documentation officielle](https://www.w3.org/TR/2004/REC-owl-guide-20040210/#PropertyCharacteristics) concernant le Web Ontology Language (OWL) de la W3C
 {% endhint %}
 
 ### Transitive
@@ -78,23 +78,28 @@ Autrement dit, pour une même propriété, si il existe "un chemin de cette prop
 >   <locatedIn rdf:resource="#USRegion" />
 > </Region>
 > ```
+> Ici, on définit que la région `SantaCruzMountainsRegion` est `locatedIn` (située dans) la région `CaliforniaRegion`, et que cette dernière est `locatedIn` la `USRegion`. Puisque `locatedIn` est transitive, on peut **en déduire** que `SantaCruzMountainsRegion` est aussi `locatedIn` la `USRegion` !
 
 ### Symétrique
 
-Si une propriété $$P$$ est spécifiée comme **symétrique**, alors $$\forall x, y$$ on a : $$P(x,y)$$ iff $$P(y,x)$$.
+Si une propriété $$P$$ est spécifiée comme **symétrique**, alors $$\forall x, y$$ on a : $$P(x,y) \leftrightarrow $$P(y,x)$$.
 
-```rdf
-<owl:ObjectProperty rdf:ID="adjacentRegion">
-  <rdf:type rdf:resource="&owl;SymmetricProperty" />
-  <rdfs:domain rdf:resource="#Region" />
-  <rdfs:range rdf:resource="#Region" />
-</owl:ObjectProperty>
+Autrement dit, si une propriété est symétrique, elle est vraie ou fasse, qu'importe le sens des termes.
 
-<Region rdf:ID="MendocinoRegion">
-  <locatedIn rdf:resource="#CaliforniaRegion" />
-  <adjacentRegion rdf:resource="#SonomaRegion" />
-</Region>
-```
+*Exemple :*
+> ```rdf
+> <owl:ObjectProperty rdf:ID="adjacentRegion">
+>   <rdf:type rdf:resource="&owl;SymmetricProperty" />
+>   <rdfs:domain rdf:resource="#Region" />
+>   <rdfs:range rdf:resource="#Region" />
+> </owl:ObjectProperty>
+> 
+> <Region rdf:ID="MendocinoRegion">
+>   <locatedIn rdf:resource="#CaliforniaRegion" />
+>   <adjacentRegion rdf:resource="#SonomaRegion" />
+> </Region>
+> ```
+> Ici, on définit en plus de la relation `locatedIn` la relation `adjacentRegion`, qui à pour domaine une `Region` et une portée de `Region`. La région `MendocinoRegion` est définie comme adjacente à la région `SonomaRegion`. On peut donc **en déduire** que `SonomaRegion` est aussi adjacente à `MendocinoRegion`. Par contre, il n'y a pas symétricité pour la relation `locatedIn CaliforniaRegion` concernant `SonomaRegion` : on n'a aucune information d'où elle est située.
 
 ### Fonctionnelle
 
