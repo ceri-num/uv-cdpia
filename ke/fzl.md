@@ -62,5 +62,5 @@ La qualité d'un modèle logique floue est reportée sur l'élaboration de ses e
 ## Ressources intéressantes
 Deux trois ressources intéressantes :
 
-* [Une introduction au niveau à la FZL](https://www.researchgate.net/publication/267041176_Introduction_a_La_Logique_Floue
+* [Une introduction au niveau à la FZL](https://www.researchgate.net/publication/267041176_Introduction_a_La_Logique_Floue)
 * [La logique floue de Zaddeh](http://www.geocities.ws/hhvillav/00000053.pdf)
