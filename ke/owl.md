@@ -130,15 +130,22 @@ Bien que la différence soit ténue, être fonctionnelle n'est pas pareil que de
 
 ### Inverse de
 
-```rdf
-<owl:ObjectProperty rdf:ID="hasMaker">
-  <rdf:type rdf:resource="&owl;FunctionalProperty" />
-</owl:ObjectProperty>
-  
-<owl:ObjectProperty rdf:ID="producesWine">
-  <owl:inverseOf rdf:resource="#hasMaker" />
-</owl:ObjectProperty>
-```
+Si une propriété $$P1$$ est spécifiée comme l'inverse de $$P2$$, alors $\forall x, y$ on a : $$P1(x,y) \leftrightarrow P2(y,x)$$.
+
+Autrement dit, on sait que si $$P1$$ est vraie, alors $$P2$$ l'est elle aussi.
+
+*Exemple :*
+
+>```rdf
+><owl:ObjectProperty rdf:ID="hasMaker">
+>  <rdf:type rdf:resource="&owl;FunctionalProperty" />
+></owl:ObjectProperty>
+>  
+><owl:ObjectProperty rdf:ID="producesWine">
+>  <owl:inverseOf rdf:resource="#hasMaker" />
+></owl:ObjectProperty>
+>```
+> Ici, les vins ont des vignerons qui les fabriquent (dans la définition de `Wine` elle est restreinte aux vignerons `Winerys`). On indique ensuite que `producesWin` est l'inverse `hasMaker` (d'être produit par).
 
 ### Fonctionnelle Inverse
 
