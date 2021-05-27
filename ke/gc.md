@@ -2,7 +2,7 @@
 
 ## Introduction
 
-En 84, **J. Sowa** (sowa1984conceptual) propose un formalisme de représentation des connaissances et de raisonnement nommé **Graphe Conceptuel** (ou graphe de concepts) qui a vocation à expliciter les entités (les noeuds du graphe) et les relations qui existent entre ces entités (les arêtes du graphe).
+En 84, **J. Sowa** (sowa1984conceptual) propose un formalisme de représentation des connaissances et de raisonnement nommé **Graphe Conceptuel** (ou graphe de concepts) qui a vocation à expliciter les entités (les noeuds du graphe) et les relations qui existent entre ces entités (les arcs du graphe).
 
 ![Un graphe conceptuel faisant intervenir des éléments d'un fable de La Fontaine, source wiki](assets/graphe_conceptuel.png)
 
