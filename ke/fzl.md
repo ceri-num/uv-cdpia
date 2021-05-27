@@ -44,6 +44,7 @@ Pour pouvoir faire de la logique avec ces ensembles, il faut définir nos connec
 * **OR** $$\approx$$ $$max(m_s_i(x),m_s_j(x))$$
 
 Maintenant que nos connecteurs sont définis, on a tout le pipeline nécessaire pour réaliser de la logique flou :
+
 1. Définir nos ensembles flous
 2. Définir nos règles logiques (*e.g.* si le service est mauvais ou la nourriture mauvaise, alors le pourboire sera faible)
 3. *Fuzzifier* les variables (*e.g.* la qualité de service et la qualité de la nourriture)
