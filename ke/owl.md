@@ -82,9 +82,9 @@ Autrement dit, pour une même propriété, si il existe "un chemin de cette prop
 
 ### Symétrique
 
-Si une propriété $$P$$ est spécifiée comme **symétrique**, alors $$\forall x, y$$ on a : $$P(x,y) \leftrightarrow $$P(y,x)$$.
+Si une propriété $$P$$ est spécifiée comme **symétrique**, alors $$\forall x, y$$ on a : $$P(x,y) \leftrightarrow P(y,x)$$.
 
-Autrement dit, si une propriété est symétrique, elle est vraie ou fasse, qu'importe le sens des termes.
+Autrement dit, si une propriété est symétrique, elle est vraie ou fausse, qu'importe le sens des termes.
 
 *Exemple :*
 > ```rdf
@@ -103,15 +103,26 @@ Autrement dit, si une propriété est symétrique, elle est vraie ou fasse, qu'i
 
 ### Fonctionnelle
 
-```rdf
-<owl:Class rdf:ID="VintageYear" />
+Si une propriété $$P$$ est spécifiée comme fonctionnelle, alors $$\forall x, y, z$$ on a : $$P(x,y) \wedge P(y,z) \rightarrow y = z$$.
 
-<owl:ObjectProperty rdf:ID="hasVintageYear">
-  <rdf:type rdf:resource="&owl;FunctionalProperty" />
-  <rdfs:domain rdf:resource="#Vintage" />
-  <rdfs:range  rdf:resource="#VintageYear" />
-</owl:ObjectProperty>
-```
+Autrement dit, si une propriété est fonctionnelle, le terme en portée est **"unique"**.
+
+{% hint style="info" %}
+Bien qu'on puisse dire que la portée est unique, cela n'empêche pas d'exprimer $$P(x,y)$$ et $$P(x,z)$$, au contraire. Si on sait que la `chocolatine` est une `viennoiserie`, mais pas le `petitPain`, que la fonction `mange` est fonctionnelle, et qu'on a un moment `mange(Bob,chocolatine)` puis plus tard `mange(Bob,petitPain)`, on en déduit que `chocolatine = petitPain` **ET** que `petitPain` est une `viennoiserie`. Pratique, en plus de mettre fin au conflit (on sait tous que la chocolatine est la vrai).
+{% endhint %}
+
+Exemple :
+
+> ```rdf
+> <owl:Class rdf:ID="VintageYear" />
+> 
+> <owl:ObjectProperty rdf:ID="hasVintageYear">
+>   <rdf:type rdf:resource="&owl;FunctionalProperty" />
+>   <rdfs:domain rdf:resource="#Vintage" />
+>   <rdfs:range  rdf:resource="#VintageYear" />
+> </owl:ObjectProperty>
+> ```
+> In our wine ontology, \texttt{hasVintageYear} is functional. A wine has a unique vintage year. That is, a given individual \texttt{Vintage} can only be associated with a single year using the \texttt{hasVintageYear} property. It is not a requirement of a \texttt{owl:FunctionalProperty} that all elements of the domain have values.
 
 ### Inverse de
 
