@@ -1,5 +1,7 @@
 # Logique propositionnelle (ou d'ordre 0)
 
+## Introduction
+
 une proposition est une assertion ayant une valeur de vérité déterminable.
 Valeur de vérité : 0 ou 1
 

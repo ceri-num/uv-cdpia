@@ -1,5 +1,7 @@
 # Logique Floue (Fuzzy Logic)
 
+## Introduction
+
 Encore de la logique ?!
 {% hint style="info" %}
 Et oui, il y a beaucoup d'autres logiques, allant de celles simples comme celle des propositions à la logique dynamique introduisant la notion d'action en plus (par exemle $$(x>6)\rightarrow [x:=x*2](x>12)$$), utilisé pour la vérification de programme informatique.

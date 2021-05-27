@@ -1,5 +1,7 @@
 # Logique des prédicats
 
+## Introduction
+
 Avec la logique des prédicats (ou d'ordre 1) on passe un cran au dessus en terme d'expressivité des phrases, puisqu'il est possible d'exprimer, entre autre, la notion de variabilité dans une proposition, qui se nomme alors un **prédicat** (smullyan1995first). Incidemment, elle devient plus difficilement satisfiable.
 
 Avec cette logique, on peut totalement modéliser des systèmes complexes, capables d'exploiter une base de connaissances et de faits pour raisonner efficacement et produire de l'information.
