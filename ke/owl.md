@@ -152,7 +152,7 @@ Si une propriété $$P$$ est spécifiée comme inverse fonctionnelle, alors $$\f
 Autrement dit, l'unicité sémantique s'établie sur le domaine de la relation, et non plus sur sa portée (à l'inverse de [Fonctionnelle](owl.md/#fonctionnelle)).
 
 {% hint style="warning" %}
-L'inverse d'une relation fonctionnelle doit toujours être qualifiée comme fonctionnelle inverse pour conserver afin de conserver la sémantique véhiculée.
+L'inverse d'une relation fonctionnelle doit toujours être qualifiée comme fonctionnelle inverse, et pas seulement l'[Inverse de](owl.md/#inverse-de), afin de conserver la sémantique véhiculée.
 {% endhint %}
 
 *Exemple :*
@@ -164,7 +164,7 @@ L'inverse d'une relation fonctionnelle doit toujours être qualifiée comme fonc
 >   <owl:inverseOf rdf:resource="#hasMaker" />
 > </owl:ObjectProperty>                                     ¬ 
 > ```
-> Notez que dans cette exemple, la relation précédemment vue dans [Inverse de](owl/#inverse-de) est qualifiée comme fonctionnelle inverse. Puisqu'un vin ne peut être produit que par une seule entité, si pour un vin donné on se retrouve avec deux producteurs différents, cela veut dire que c'est forcément les mêmes.
+> Notez que dans cette exemple, la relation précédemment vue dans [Inverse de](owl/#inverse-de) est qualifiée ici comme fonctionnelle inverse. Puisqu'un vin ne peut être produit que par une seule entité, si pour un vin donné on se retrouve avec deux producteurs différents, cela veut dire que c'est forcément les mêmes.
 
 ## Représentation des ontologies
 

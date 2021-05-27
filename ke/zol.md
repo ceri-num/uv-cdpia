@@ -59,8 +59,8 @@ L'ordre d'application des connecteurs a une importance. Pour spécifier l'ordre,
 | $$P$$   |  $$Q$$  | $$P \rightarrow Q$$ |
 |:----------:|:-------------:|:-------------:|
 | 0 | 0 | 1 | 
-| 0 | 1 | 0 |
-| 1 | 0 | 1 |
+| 0 | 1 | 1 |
+| 1 | 0 | 0 |
 | 1 | 1 | 1 |
 
 
