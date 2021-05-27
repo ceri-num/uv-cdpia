@@ -7,7 +7,7 @@ En réalité, c'est un paradigme de **structuration** et de **description** de l
 Les informations stockées dans un BdD peuvent être **très structurées** : c'est le cas des bases de données dîtes relationnelles, classiquement utilisées (MySQL, etc.). Mais ces informations peuvent aussi être (très peu) structurées, comme avec NoSQL qui est assimilable à un immense tableau associatif.
 
 {% hint style="info" %}
-Les géants du web ont depuis bien longtemps abandonnés les SGBD relationnels car leur performance devient mauvaise plus le volume de données augmente : c'est là la contre partie de la structuration de la donnée pour intégrer des contraintes supplémentaires sur l'information. 
+Les géants du web ont depuis bien longtemps abandonnés les SGBD relationnels car leur performance devient médiocre avec un très important volume de données : c'est là la contre partie de la structuration de la donnée pour intégrer des contraintes supplémentaires sur l'information. 
 {% endhint %}
 
 ![Détail partiel de la base de données de Wikipedia](assets/wiki_bdd.png)
