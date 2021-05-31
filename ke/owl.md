@@ -126,7 +126,7 @@ Exemple :
 > Ici la fonction `hasVintageYear` (a un millésime) est fonctionnelle. Un vin ne peut avoir qu'un seul millésime, pas plus. Aussi, une entité `Vintage` ne pourra associée sémantiquement qu'à une seule année `VintageYear` via la relation `hasVintageYear`.
 
 {% hint style="danger" %}
-Bien que la différence soit ténue, être fonctionnelle n'est pas pareil que de limiter une entité à n'avoir une relation qu'avec une autre entité ! La fonctionnalité, c'est plutôt une "unicité sémantique de l'individualisation de la portée d'un prédicat".
+Bien que la différence soit ténue, être fonctionnelle n'est pas pareil que de limiter une classe à n'avoir une relation qu'avec une autre classe ! La fonctionnalité, c'est plutôt une "unicité sémantique de l'individualisation de la portée d'un prédicat".
 {% endhint %}
 
 ### Inverse de
@@ -166,7 +166,7 @@ L'inverse d'une relation fonctionnelle doit toujours être qualifiée comme fonc
 >   <owl:inverseOf rdf:resource="#hasMaker" />
 > </owl:ObjectProperty>                                     ¬ 
 > ```
-> Notez que dans cette exemple, la relation précédemment vue dans [Inverse de](owl/#inverse-de) est qualifiée ici comme fonctionnelle inverse. Puisqu'un vin ne peut être produit que par une seule entité, si pour un vin donné on se retrouve avec deux producteurs différents, cela veut dire que c'est forcément les mêmes.
+> Notez que dans cette exemple, la relation précédemment vue dans [Inverse de](owl/#inverse-de) est qualifiée ici comme fonctionnelle inverse. Puisqu'un vin ne peut être produit que par une seule classe, si pour un vin donné on se retrouve avec deux producteurs différents, cela veut dire que c'est forcément les mêmes.
 
 ## Représentation des ontologies
 

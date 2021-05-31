@@ -4,7 +4,7 @@
 
 Introduire de la sémantique dans les données ne sert pas qu'à faire joli, surtout dans le cas des graphes conceptuels et des ontologies.
 
-Dans des bases de connaissances taxonimiques par exemple (*e.g.* GC et ontologie), il devient possible d'exploiter la proximité sémantique des termes et des relations décrites pour étendre le raisonnement et chercher de l'information et des solutions.
+Dans des bases de connaissances taxonimiques par exemple (*e.g.* GC et ontologie), il devient possible d'exploiter la proximité sémantique des termes (classes) et des relations décrites pour étendre le raisonnement et chercher de l'information et des solutions.
 
 {% hint style="success" %}
 Ce type de raisonnement permet de produire des résultats non-exacts ; pratique par exemple lors d'une recherche et que l'on ne trouve pas de résultat pour la requête utilisateur ! C'est par exemple ce qui est effectué dans mes travaux [[Lebis19]](../REF.md/#lebis19).
@@ -12,9 +12,9 @@ Ce type de raisonnement permet de produire des résultats non-exacts ; pratique 
 
 ## Distance sémantique
 
-À partir d'une ontologie, il est possible de définir des **métriques** et des **caractéristiques** dépendantes de la position des entités de l'ontologie les uns par rapport aux autres, en fonction des relations qu'ils partagent. Cela permet notamment :
+À partir d'une ontologie, il est possible de définir des **métriques** et des **caractéristiques** dépendantes de la position des classes de l'ontologie les uns par rapport aux autres, en fonction des relations qu'ils partagent. Cela permet notamment :
 
-* De dériver **approximativement** le type et les propriétés d'une entité qu'on insère dans la base de connaissance et dont on a aucun connaissance *a priori* ;
+* De dériver **approximativement** le type et les propriétés d'une classe qu'on insère dans la base de connaissance et dont on a aucun connaissance *a priori* ;
 * De **supposer** d'inconsistences et de propriétés ;
 * D'étendre l'espace de recherche.
 
@@ -30,11 +30,11 @@ Cette approximation se fonde sur le fait que si `B est subsumé par A` (*i.e.* `
 Cette taxonomie s'établit naturellement dans une ontologie en utilisant les notions de `subclassOf`,  comme dans :`Chien subclassOf Mammifère`.
 {% endhint %}
 
-L'avantage de cette approche est que l'on peut remonter la chaîne prototypal d'un élément ; théoriquement, plus on s'éloigne de l'élément de référence, moins l'alignement est convenable et plus les incohérences sont présentes.
+L'avantage de cette approche est que l'on peut remonter la chaîne prototypal d'un terme ; théoriquement, plus on s'éloigne de l'élément de référence, moins l'alignement est convenable et plus les incohérences sont présentes.
 
 ### Largeur taxonimique
 
-À l'instar du parcours vertical du graphe ontologique des entités, on peut aussi imaginer un parcours horizontal des entités sous des termes parents, pour permettre la recherche de termes similaires à ceux initiaux.
+À l'instar du parcours vertical du graphe ontologique des entités, on peut aussi imaginer un parcours horizontal des classes sous des termes parents, pour permettre la recherche de termes similaires à ceux initiaux.
 
 ### Largeur synonymique
 
@@ -59,7 +59,7 @@ Dans la figure précédente, on calcule le score d'approximation *via* deux fonc
 
 Classiquement, comme proposé dans [Corese06](../REF.md/#corese06), on peut définir la profondeur sémantique comme $$\frac{1}{(2^n)}$$ et la largeur comme $$\frac{1}{2}\times h$$. 
 
-Pour les synonymes, cela dépendra de s'il s'agit d'entités ou de relation. Un exemple de comment réaliser cela :
+Pour les synonymes, cela dépendra de s'il s'agit de classes ou de relations. Un exemple de comment réaliser cela :
 
 ![Exemple de calcul de score d'approximation pour les relations d'une ontologie [Lebis19].](assets/approx_sem_score_rel.png)
 
