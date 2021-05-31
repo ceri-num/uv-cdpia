@@ -15,17 +15,17 @@ L'idée est de créer une ontologie concernant des pizzas.
 
 ## Sommaire
 
-1. Présentation et dictionnaire des éléments
-2. Définition du top level
-3. Définition du squelette de la hiérarchie
-4. Définition des propriétés des objets
-5. Mise en relation des classes
-6. Finalisation de l'ontologie
-7. Classification et vérification
+1. [Étude du problème](step1.md)
+2. [Définition du top level](step2.md)
+3. [Définition du squelette de la hiérarchie](step3.md)
+4. [Définition des propriétés des objets](step4.md)
+5. [Mise en relation des classes](step5.md)
+6. [Finalisation de l'ontologie](step6.md)
+7. [Classification et vérification](step7.md)
 
 ## Installation
 
-Pour réaliser cette partie, nous utiliserons le logiciel [Protégé](https://protege.stanford.edu/) conçu pour l'élaboration d'ontologie. Rendez-vous dans la section téléchargement et sélectionner la version qui correspond à votre système d'exploitation... ou [cliquez ici](https://protege.stanford.edu/products.php#desktop-protege).
+Pour réaliser cette partie, nous utiliserons le logiciel [Protégé](https://protege.stanford.edu/) conçu pour l'élaboration d'ontologie. Rendez-vous dans la section téléchargement et sélectionnez la version qui correspond à votre système d'exploitation... ou [cliquez ici](https://protege.stanford.edu/products.php#desktop-protege).
 
 {% hint style="info" %}
 Au moment du téléchargement, un pop-up vous demande de vous enregistrez ; si vous ne le souhaitez pas, vous n'avez simplement qu'à cliquer sur "Je suis déjà enregistré".

@@ -30,13 +30,13 @@
 ## Mise en pratique
 
 * [Tutoriel](handson/tuto.md)
-* [Étape 1](handson/step1.md)
-* [Étape 2](handson/step2.md)
-* [Étape 3](handson/step3.md)
-* [Étape 4](handson/step4.md)
-* [Étape 5](handson/step5.md)
-* [Étape 6](handson/step6.md)
-* [Étape 7](handson/step7.md)
+* [Étude du problème](handson/step1.md)
+* [Définition du top level](handson/step2.md)
+* [Définition du squelette de la hiérarchie](handson/step3.md)
+* [Définition des propriétés des objets](handson/step4.md)
+* [Mise en relation des classes](handson/step5.md)
+* [Finalisation de l'ontologie](handson/step6.md)
+* [Classification et vérification](handson/step7.md)
 
 ## Annexes
 
