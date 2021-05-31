@@ -37,7 +37,7 @@ Souvenez vous, vous pouvez exprimer cette règle comme étant $$\text{has_spicin
 Répéter l'opération pour les différentes garnitures pour compléter les relations. 
 
 {% hint style="info" %}
-On aurait pu utiliser notre connaissance experte pour renseigner manuellement **Hot_and_spiccy_pizza**, mais on a un moyen automatique basé sur les concepts qui nous permet de le faire.
+On aurait pu utiliser notre connaissance experte pour renseigner manuellement **Hot_and_spiccy_pizza**, mais on a un moyen automatique basé sur les relations et classes qui nous permet de le faire de manière élégante (surtout si la définition est complexe).
 {% endhint %}
 
 {% hint style="warning" %}
