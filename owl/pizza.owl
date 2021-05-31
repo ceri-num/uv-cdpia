@@ -68,7 +68,15 @@
 
 ###  http://www.semanticweb.org/alexis/ontologies/pizza#Cheesy_pizza
 :Cheesy_pizza rdf:type owl:Class ;
-              rdfs:subClassOf :Pizza .
+              rdfs:subClassOf [ owl:intersectionOf ( :Pizza
+                                                     [ rdf:type owl:Restriction ;
+                                                       owl:onProperty :has_topping ;
+                                                       owl:minQualifiedCardinality "2"^^xsd:nonNegativeInteger ;
+                                                       owl:onClass :Cheese_topping
+                                                     ]
+                                                   ) ;
+                                rdf:type owl:Class
+                              ] .
 
 
 ###  http://www.semanticweb.org/alexis/ontologies/pizza#Domain_entity
@@ -140,10 +148,10 @@
                                   ] ,
                                   [ rdf:type owl:Restriction ;
                                     owl:onProperty :has_topping ;
-                                    owl:allValuesFrom [ owl:intersectionOf ( :Mozzarella_topping
-                                                                             :Tomato_topping
-                                                                           ) ;
-                                                        rdf:type owl:Class
+                                    owl:allValuesFrom [ rdf:type owl:Class ;
+                                                        owl:unionOf ( :Mozzarella_topping
+                                                                      :Tomato_topping
+                                                                    )
                                                       ]
                                   ] .
 
@@ -291,12 +299,41 @@
 
 ###  http://www.semanticweb.org/alexis/ontologies/pizza#Vegan_pizza
 :Vegan_pizza rdf:type owl:Class ;
-             rdfs:subClassOf :Pizza .
+             rdfs:subClassOf [ owl:intersectionOf ( :Pizza
+                                                    [ rdf:type owl:Class ;
+                                                      owl:complementOf [ rdf:type owl:Restriction ;
+                                                                         owl:onProperty :has_topping ;
+                                                                         owl:someValuesFrom [ rdf:type owl:Class ;
+                                                                                              owl:unionOf ( :Cheese_topping
+                                                                                                            :Fish_topping
+                                                                                                            :Meet_topping
+                                                                                                          )
+                                                                                            ]
+                                                                       ]
+                                                    ]
+                                                  ) ;
+                               rdf:type owl:Class
+                             ] .
 
 
 ###  http://www.semanticweb.org/alexis/ontologies/pizza#Vegetable_topping
 :Vegetable_topping rdf:type owl:Class ;
                    rdfs:subClassOf :Pizza_topping .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  http://www.semanticweb.org/alexis/ontologies/pizza#myMargueritaBoughtAtDouai
+:myMargueritaBoughtAtDouai rdf:type owl:NamedIndividual ,
+                                    :Marguerita_pizza ;
+                           :has_topping :theBeefOnMyMarguerita .
+
+
+###  http://www.semanticweb.org/alexis/ontologies/pizza#theBeefOnMyMarguerita
+:theBeefOnMyMarguerita rdf:type owl:NamedIndividual ,
+                                :Tomato_topping .
 
 
 #################################################################
