@@ -18,7 +18,7 @@ modifier_property
 ```
 
 {% hint style="warning" %}
-N'oubliez pas de sélectionner `owl:topObjectProperty` avant de faire appelle au COPH pour que les deux propriétés créés se retrouvent bien "en dedans" (soit subsumées).
+N'oubliez pas de sélectionner `owl:topObjectProperty` avant de faire appelle au COPH pour que les deux propriétés créées se retrouvent bien "en dedans" (soit subsumées).
 {% endhint %}
 
 ## Les propriétés de notre modèle
@@ -55,9 +55,10 @@ On va maintenant chercher à exprimer le degré de force de la pizza. Le point d
 Aussi, revenez dans l'onglet `Object Property`, puis :
 
 1. Créez une nouvelle propriété `has_Spiciness`, cette fois ci rattaché à `modifier_property` ;
-2. Dans `Domain`, indiquez `Pizza_topping` ;
-3. Dans `Range`, indiquez `Spiciness_value` ;
-4. Cochez la case fonctionnelle.
+2. Retournez dans la `Matrix View` ;
+3. Dans `Domain`, indiquez `Pizza_topping` ;
+4. Dans `Range`, indiquez `Spiciness_value` ;
+5. Cochez la case fonctionnelle.
 
 Et voila !
 
