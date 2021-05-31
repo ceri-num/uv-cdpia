@@ -40,13 +40,13 @@ Maintenant que les deux propriétés relationnelles existent, on va les spécial
 
 1. Cliquez sur l'onglet `Property matrix` ;
 2. Sélectionnez d'abord la propriété `has_topping` (surbrillance bleue) :
-3. 1. On va dire d'où elle "part". Dans la colonne `Domain`, tapez `Pizza` (un `Ctrl + Espace` vous fait une auto-complétion). C'est la pizza qui est concernée par la garniture !
-3. 2. Posséder de la garniture signifie qu'on parle de garniture ! Dans la colonne `Range`, tapez `Pizza_topping`. Et voila, maintenant, on englobe toutes les sortes de garnitures (fromage, viandes, etc.).
-3. 3. Indiquez cette propriété comme étant inversement fonctionnelle en cochant la boite correspondante (c'est la garniture qui conditionne le type de pizza)
+3. * On va dire d'où elle "part". Dans la colonne `Domain`, tapez `Pizza` (un `Ctrl + Espace` vous fait une auto-complétion). C'est la pizza qui est concernée par la garniture !
+3. * Posséder de la garniture signifie qu'on parle de garniture ! Dans la colonne `Range`, tapez `Pizza_topping`. Et voila, maintenant, on englobe toutes les sortes de garnitures (fromage, viandes, etc.).
+3. * Indiquez cette propriété comme étant inversement fonctionnelle en cochant la boite correspondante (c'est la garniture qui conditionne le type de pizza)
 4. Sélectionnez la propriété `has_base` :
-4. 1. Dans `Domain`, indiquez `Pizza` ;
-4. 2. Dans `Range`, indiquez `Pizza_base` ;
-4. 3. Dans les propriétés cochez fonctionnelle et inversement fonctionnelle (on individualise les deux côtés)
+4. * Dans `Domain`, indiquez `Pizza` ;
+4. * Dans `Range`, indiquez `Pizza_base` ;
+4. * Dans les propriétés cochez fonctionnelle et inversement fonctionnelle (on individualise les deux côtés)
 
 ### Les propriétés de mutabilité
 
