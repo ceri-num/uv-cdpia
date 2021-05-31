@@ -53,7 +53,11 @@
 
 ###  http://www.semanticweb.org/alexis/ontologies/pizza#Anchovy_topping
 :Anchovy_topping rdf:type owl:Class ;
-                 rdfs:subClassOf :Fish_topping ;
+                 rdfs:subClassOf :Fish_topping ,
+                                 [ rdf:type owl:Restriction ;
+                                   owl:onProperty :has_topping ;
+                                   owl:someValuesFrom :Mild_value
+                                 ] ;
                  owl:disjointWith :Tuna_topping .
 
 
@@ -83,13 +87,21 @@
 
 ###  http://www.semanticweb.org/alexis/ontologies/pizza#Gorganzolla_topping
 :Gorganzolla_topping rdf:type owl:Class ;
-                     rdfs:subClassOf :Cheese_topping ;
+                     rdfs:subClassOf :Cheese_topping ,
+                                     [ rdf:type owl:Restriction ;
+                                       owl:onProperty :has_topping ;
+                                       owl:someValuesFrom :Mild_value
+                                     ] ;
                      owl:disjointWith :Mozzarella_topping .
 
 
 ###  http://www.semanticweb.org/alexis/ontologies/pizza#Ham_topping
 :Ham_topping rdf:type owl:Class ;
-             rdfs:subClassOf :Meet_topping .
+             rdfs:subClassOf :Meet_topping ,
+                             [ rdf:type owl:Restriction ;
+                               owl:onProperty :has_topping ;
+                               owl:someValuesFrom :Medium_value
+                             ] .
 
 
 ###  http://www.semanticweb.org/alexis/ontologies/pizza#Hot_and_spicy_pizza
@@ -110,7 +122,15 @@
 
 ###  http://www.semanticweb.org/alexis/ontologies/pizza#Marguerita_pizza
 :Marguerita_pizza rdf:type owl:Class ;
-                  rdfs:subClassOf :Pizza .
+                  rdfs:subClassOf :Pizza ,
+                                  [ rdf:type owl:Restriction ;
+                                    owl:onProperty :has_spiciness ;
+                                    owl:someValuesFrom :Mozzarella_topping
+                                  ] ,
+                                  [ rdf:type owl:Restriction ;
+                                    owl:onProperty :has_spiciness ;
+                                    owl:someValuesFrom :Tomato_topping
+                                  ] .
 
 
 ###  http://www.semanticweb.org/alexis/ontologies/pizza#Medium_value
@@ -130,22 +150,38 @@
 
 ###  http://www.semanticweb.org/alexis/ontologies/pizza#Mozzarella_topping
 :Mozzarella_topping rdf:type owl:Class ;
-                    rdfs:subClassOf :Cheese_topping .
+                    rdfs:subClassOf :Cheese_topping ,
+                                    [ rdf:type owl:Restriction ;
+                                      owl:onProperty :has_topping ;
+                                      owl:someValuesFrom :Mild_value
+                                    ] .
 
 
 ###  http://www.semanticweb.org/alexis/ontologies/pizza#Onion_topping
 :Onion_topping rdf:type owl:Class ;
-               rdfs:subClassOf :Vegetable_topping .
+               rdfs:subClassOf :Vegetable_topping ,
+                               [ rdf:type owl:Restriction ;
+                                 owl:onProperty :has_topping ;
+                                 owl:someValuesFrom :Mild_value
+                               ] .
 
 
 ###  http://www.semanticweb.org/alexis/ontologies/pizza#Pepperoni_topping
 :Pepperoni_topping rdf:type owl:Class ;
-                   rdfs:subClassOf :Meet_topping .
+                   rdfs:subClassOf :Meet_topping ,
+                                   [ rdf:type owl:Restriction ;
+                                     owl:onProperty :has_topping ;
+                                     owl:someValuesFrom :Medium_value
+                                   ] .
 
 
 ###  http://www.semanticweb.org/alexis/ontologies/pizza#Pineapple_topping
 :Pineapple_topping rdf:type owl:Class ;
-                   rdfs:subClassOf :Fruit_topping .
+                   rdfs:subClassOf :Fruit_topping ,
+                                   [ rdf:type owl:Restriction ;
+                                     owl:onProperty :has_topping ;
+                                     owl:someValuesFrom :Mild_value
+                                   ] .
 
 
 ###  http://www.semanticweb.org/alexis/ontologies/pizza#Pizza
@@ -165,7 +201,11 @@
 
 ###  http://www.semanticweb.org/alexis/ontologies/pizza#Soja_steak_topping
 :Soja_steak_topping rdf:type owl:Class ;
-                    rdfs:subClassOf :Vegetable_topping .
+                    rdfs:subClassOf :Vegetable_topping ,
+                                    [ rdf:type owl:Restriction ;
+                                      owl:onProperty :has_topping ;
+                                      owl:someValuesFrom :Medium_value
+                                    ] .
 
 
 ###  http://www.semanticweb.org/alexis/ontologies/pizza#Spiciness_value
@@ -181,7 +221,11 @@
 
 ###  http://www.semanticweb.org/alexis/ontologies/pizza#Spicy_beef_topping
 :Spicy_beef_topping rdf:type owl:Class ;
-                    rdfs:subClassOf :Meet_topping .
+                    rdfs:subClassOf :Meet_topping ,
+                                    [ rdf:type owl:Restriction ;
+                                      owl:onProperty :has_topping ;
+                                      owl:someValuesFrom :Hot_value
+                                    ] .
 
 
 ###  http://www.semanticweb.org/alexis/ontologies/pizza#Thick_crust_base
@@ -197,12 +241,20 @@
 
 ###  http://www.semanticweb.org/alexis/ontologies/pizza#Tomato_topping
 :Tomato_topping rdf:type owl:Class ;
-                rdfs:subClassOf :Vegetable_topping .
+                rdfs:subClassOf :Vegetable_topping ,
+                                [ rdf:type owl:Restriction ;
+                                  owl:onProperty :has_topping ;
+                                  owl:someValuesFrom :Mild_value
+                                ] .
 
 
 ###  http://www.semanticweb.org/alexis/ontologies/pizza#Tuna_topping
 :Tuna_topping rdf:type owl:Class ;
-              rdfs:subClassOf :Fish_topping .
+              rdfs:subClassOf :Fish_topping ,
+                              [ rdf:type owl:Restriction ;
+                                owl:onProperty :has_topping ;
+                                owl:someValuesFrom :Mild_value
+                              ] .
 
 
 ###  http://www.semanticweb.org/alexis/ontologies/pizza#Value

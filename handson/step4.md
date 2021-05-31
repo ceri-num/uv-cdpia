@@ -64,7 +64,7 @@ Et voila !
 
 ## Qu'est-ce qu'on vient de faire ?
 
-Dans cette partie, vous venez de créer vos premières propriétés (relations) entre vos classes, et **surtout**, vous les avez liés entre elles.
+Dans cette partie, vous venez de créer vos premières propriétés (relations) entre vos classes, et **surtout**, vous les avez liées entre elles.
 
 ![Le résultat de cette partie. Faîtes attention aux propriétés de vos relations](assets/properties_matrix.png)
 
