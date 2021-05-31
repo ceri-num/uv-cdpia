@@ -50,7 +50,7 @@ Relancer le raisonneur, et vous verrez que ce dernier à inférer le type des é
 
 Vous trouverez si dessous le dump de l'ontologie qu'on a construit au fil de ce tuto (avec une magnifique faute d'orthographe à viande !). Elle est aussi accessible [ici](../owl/pizza.owl).
 
-```
+```turtle
 @prefix : <http://www.semanticweb.org/alexis/ontologies/pizza#> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
