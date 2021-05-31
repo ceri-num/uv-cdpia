@@ -68,9 +68,11 @@ Pour les propriétés, on en a deux principales, à savoir :
 | Possède une garniture | `hasTopping` |
 | Possède une pâte | `hasCrust` |
 
-{% hint style="warning" %}
+{% hint style="info" %}
 Vous avez remarqué ? Mes classes commencent par une majuscule, alors que mes propriétés non ! C'est une convention.
 {% endhint %}
+
+On peut aussi imaginé que nos pizza soit épicées selon un certain niveau !
 
 ## Résumé 
 
