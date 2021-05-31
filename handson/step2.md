@@ -5,7 +5,7 @@ Dans cette section, on va simplement créer notre ontologie en la nommant, et cr
 ## Créer son ontologie
 
 1. Lancez Protégé ;
-2. Si une fenêtre pop-up apparaît, fermez là (rappel : vous devez avoir installé [Matrix Views](tuto.md/#plugin-and-configuration)) ;
+2. Si une fenêtre pop-up apparaît, fermez la (rappel : vous devez avoir installé [Matrix Views](tuto.md/#plugin-and-configuration)) ;
 3. Rendez vous dans l'onglet `Active Ontology` de votre zone de travail (à gauche de `Entities`) ;
 4. Renommez votre ontologie dans le champ `Ontology IRI` ;
 5. Sauvegarder votre ontologie (soit en format `Turtle` soit en format `RDF/XML`).
