@@ -331,9 +331,13 @@
                            :has_topping :theBeefOnMyMarguerita .
 
 
+###  http://www.semanticweb.org/alexis/ontologies/pizza#tasteOfMyTopping
+:tasteOfMyTopping rdf:type owl:NamedIndividual .
+
+
 ###  http://www.semanticweb.org/alexis/ontologies/pizza#theBeefOnMyMarguerita
-:theBeefOnMyMarguerita rdf:type owl:NamedIndividual ,
-                                :Tomato_topping .
+:theBeefOnMyMarguerita rdf:type owl:NamedIndividual ;
+                       :has_spiciness :tasteOfMyTopping .
 
 
 #################################################################
