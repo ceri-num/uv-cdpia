@@ -8,6 +8,8 @@ Soyez attentif, on pratiquera sur les ontologies dans la section de [Mise en pra
 
 bla
 
+![Visualisation de l'ontologie Friend of a Friend (FOAF) grâce à WEBVOWL](assets/foaf_vowl.png)
+
 Les étapes classiques pour l'élaboration d'une ontologie, d'après [Powell, 2015](../REF.md/#powell2015) :
 
 1. Identifier votre **taxonomie** -- quels sont les éléments, les sous-éléments...
