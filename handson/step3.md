@@ -87,11 +87,42 @@ Cheesy
 Vegan
 Marguerita
 ```
+{% hint style="warning" %}
+Cette fois ci, décochez la boîte pour les classes disjointes. Certaines seront l'unions d'autres, on vera après !
+{% endhint %}
+
+## Quelques concepts de valeur : la force de la Pizza !
+
+On aime bien quand ça pique, donc on va rajouter également le côté épicé dans notre ontologie. Puisqu'il peut avoir différentes valeurs (*e.g.* forte, médium...), il convient mieux de le mettre dans la section `Value` de notre hiérarchie de concepts.
+
+```
+Spiciness
+    Hot
+    Medium
+    Mild
+```
+
+{% hint style="info" %}
+N'oubliez pas de rajouter le suffixe `_value` dans le CCH !
+{% endhint %}
+
+{% hint style="danger" %}
+N'oubliez pas ce qui suit !
+{% endhint %}
+
+1. Cliquez sur `Spiciness_value` (ou votre classe qui subsume vos valeurs) ;
+2. Aller dans `Edit > Add Covering Axioms` (vous verrez alors que votre `Spiciness_value` devient également une sous classe de vos valeurs).
+
+{% hint style="info" %}
+OWL est défini selon le principe de "monde ouvert" : ce qui est omis existe peut être. Quand vous indiquez par exemple qu'il existe trois valeurs pour la `Spiciness`, si vous ne "couvrez pas" cette classe, le raisonneur va supposer qu'il peut exister d'autres éléments, empêchant par exemple l'identification d'éléments équivalent.
+{% endhint %}
 
 ## Qu'est-ce qu'on vient de faire ?
 
 Dans cette section, nous venons d'étoffer notre ontologie en la détaillant via des classes spécifiques. Cela nous permet de lister les différents concepts qui interviennent dans le "monde de la pizza".
 
-Vous avez appris à créer des classes et des sous-classes via le *CCH* qui représentaient votre conception du monde de la pizza.
+![Le résultat de votre travail, à deux trois carottes près.](assets/all_taxonomy.png)
+
+Vous avez appris à créer des classes et des sous-classes via le *CCH* qui représentaient votre conception du monde de la pizza. Vous avez également appris à définir des concepts valeurs, et à "fermer le groupe" (*i.e.* dire que ce sont les seuls valeurs possibles).
 
 Notez cependant que **ce ne sont pas des individus** mais bien des concepts, même les classes dans `Pizza` : elles représentent le concept d'une pizza Vegan, d'une pizza Margarita, etc.

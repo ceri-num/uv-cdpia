@@ -8,4 +8,262 @@
 
 <http://www.semanticweb.org/alexis/ontologies/pizza> rdf:type owl:Ontology .
 
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://www.semanticweb.org/alexis/ontologies/pizza#has_base
+:has_base rdf:type owl:ObjectProperty ;
+          rdfs:subPropertyOf :relational_property ;
+          rdf:type owl:FunctionalProperty ,
+                   owl:InverseFunctionalProperty ;
+          rdfs:domain :Pizza ;
+          rdfs:range :Pizza_base .
+
+
+###  http://www.semanticweb.org/alexis/ontologies/pizza#has_spiciness
+:has_spiciness rdf:type owl:ObjectProperty ;
+               rdfs:subPropertyOf :modifier_property ;
+               rdf:type owl:FunctionalProperty ;
+               rdfs:domain :Pizza_topping ;
+               rdfs:range :Spiciness_value .
+
+
+###  http://www.semanticweb.org/alexis/ontologies/pizza#has_topping
+:has_topping rdf:type owl:ObjectProperty ;
+             rdfs:subPropertyOf :relational_property ;
+             rdf:type owl:InverseFunctionalProperty ;
+             rdfs:domain :Pizza ;
+             rdfs:range :Pizza_topping .
+
+
+###  http://www.semanticweb.org/alexis/ontologies/pizza#modifier_property
+:modifier_property rdf:type owl:ObjectProperty ;
+                   rdfs:subPropertyOf owl:topObjectProperty .
+
+
+###  http://www.semanticweb.org/alexis/ontologies/pizza#relational_property
+:relational_property rdf:type owl:ObjectProperty ;
+                     rdfs:subPropertyOf owl:topObjectProperty .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://www.semanticweb.org/alexis/ontologies/pizza#Anchovy_topping
+:Anchovy_topping rdf:type owl:Class ;
+                 rdfs:subClassOf :Fish_topping ;
+                 owl:disjointWith :Tuna_topping .
+
+
+###  http://www.semanticweb.org/alexis/ontologies/pizza#Cheese_topping
+:Cheese_topping rdf:type owl:Class ;
+                rdfs:subClassOf :Pizza_topping .
+
+
+###  http://www.semanticweb.org/alexis/ontologies/pizza#Cheesy_pizza
+:Cheesy_pizza rdf:type owl:Class ;
+              rdfs:subClassOf :Pizza .
+
+
+###  http://www.semanticweb.org/alexis/ontologies/pizza#Domain_entity
+:Domain_entity rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/alexis/ontologies/pizza#Fish_topping
+:Fish_topping rdf:type owl:Class ;
+              rdfs:subClassOf :Pizza_topping .
+
+
+###  http://www.semanticweb.org/alexis/ontologies/pizza#Fruit_topping
+:Fruit_topping rdf:type owl:Class ;
+               rdfs:subClassOf :Pizza_topping .
+
+
+###  http://www.semanticweb.org/alexis/ontologies/pizza#Gorganzolla_topping
+:Gorganzolla_topping rdf:type owl:Class ;
+                     rdfs:subClassOf :Cheese_topping ;
+                     owl:disjointWith :Mozzarella_topping .
+
+
+###  http://www.semanticweb.org/alexis/ontologies/pizza#Ham_topping
+:Ham_topping rdf:type owl:Class ;
+             rdfs:subClassOf :Meet_topping .
+
+
+###  http://www.semanticweb.org/alexis/ontologies/pizza#Hot_and_spicy_pizza
+:Hot_and_spicy_pizza rdf:type owl:Class ;
+                     rdfs:subClassOf :Pizza .
+
+
+###  http://www.semanticweb.org/alexis/ontologies/pizza#Hot_value
+:Hot_value rdf:type owl:Class ;
+           rdfs:subClassOf :Spiciness_value .
+
+
+###  http://www.semanticweb.org/alexis/ontologies/pizza#Independent_entity
+:Independent_entity rdf:type owl:Class ;
+                    rdfs:subClassOf :Domain_entity ;
+                    owl:disjointWith :Value .
+
+
+###  http://www.semanticweb.org/alexis/ontologies/pizza#Marguerita_pizza
+:Marguerita_pizza rdf:type owl:Class ;
+                  rdfs:subClassOf :Pizza .
+
+
+###  http://www.semanticweb.org/alexis/ontologies/pizza#Medium_value
+:Medium_value rdf:type owl:Class ;
+              rdfs:subClassOf :Spiciness_value .
+
+
+###  http://www.semanticweb.org/alexis/ontologies/pizza#Meet_topping
+:Meet_topping rdf:type owl:Class ;
+              rdfs:subClassOf :Pizza_topping .
+
+
+###  http://www.semanticweb.org/alexis/ontologies/pizza#Mild_value
+:Mild_value rdf:type owl:Class ;
+            rdfs:subClassOf :Spiciness_value .
+
+
+###  http://www.semanticweb.org/alexis/ontologies/pizza#Mozzarella_topping
+:Mozzarella_topping rdf:type owl:Class ;
+                    rdfs:subClassOf :Cheese_topping .
+
+
+###  http://www.semanticweb.org/alexis/ontologies/pizza#Onion_topping
+:Onion_topping rdf:type owl:Class ;
+               rdfs:subClassOf :Vegetable_topping .
+
+
+###  http://www.semanticweb.org/alexis/ontologies/pizza#Pepperoni_topping
+:Pepperoni_topping rdf:type owl:Class ;
+                   rdfs:subClassOf :Meet_topping .
+
+
+###  http://www.semanticweb.org/alexis/ontologies/pizza#Pineapple_topping
+:Pineapple_topping rdf:type owl:Class ;
+                   rdfs:subClassOf :Fruit_topping .
+
+
+###  http://www.semanticweb.org/alexis/ontologies/pizza#Pizza
+:Pizza rdf:type owl:Class ;
+       rdfs:subClassOf :Independent_entity .
+
+
+###  http://www.semanticweb.org/alexis/ontologies/pizza#Pizza_base
+:Pizza_base rdf:type owl:Class ;
+            rdfs:subClassOf :Independent_entity .
+
+
+###  http://www.semanticweb.org/alexis/ontologies/pizza#Pizza_topping
+:Pizza_topping rdf:type owl:Class ;
+               rdfs:subClassOf :Independent_entity .
+
+
+###  http://www.semanticweb.org/alexis/ontologies/pizza#Soja_steak_topping
+:Soja_steak_topping rdf:type owl:Class ;
+                    rdfs:subClassOf :Vegetable_topping .
+
+
+###  http://www.semanticweb.org/alexis/ontologies/pizza#Spiciness_value
+:Spiciness_value rdf:type owl:Class ;
+                 rdfs:subClassOf :Value ,
+                                 [ rdf:type owl:Class ;
+                                   owl:unionOf ( :Hot_value
+                                                 :Medium_value
+                                                 :Mild_value
+                                               )
+                                 ] .
+
+
+###  http://www.semanticweb.org/alexis/ontologies/pizza#Spicy_beef_topping
+:Spicy_beef_topping rdf:type owl:Class ;
+                    rdfs:subClassOf :Meet_topping .
+
+
+###  http://www.semanticweb.org/alexis/ontologies/pizza#Thick_crust_base
+:Thick_crust_base rdf:type owl:Class ;
+                  rdfs:subClassOf :Pizza_base ;
+                  owl:disjointWith :Thin_crust_base .
+
+
+###  http://www.semanticweb.org/alexis/ontologies/pizza#Thin_crust_base
+:Thin_crust_base rdf:type owl:Class ;
+                 rdfs:subClassOf :Pizza_base .
+
+
+###  http://www.semanticweb.org/alexis/ontologies/pizza#Tomato_topping
+:Tomato_topping rdf:type owl:Class ;
+                rdfs:subClassOf :Vegetable_topping .
+
+
+###  http://www.semanticweb.org/alexis/ontologies/pizza#Tuna_topping
+:Tuna_topping rdf:type owl:Class ;
+              rdfs:subClassOf :Fish_topping .
+
+
+###  http://www.semanticweb.org/alexis/ontologies/pizza#Value
+:Value rdf:type owl:Class ;
+       rdfs:subClassOf :Domain_entity .
+
+
+###  http://www.semanticweb.org/alexis/ontologies/pizza#Vegan_pizza
+:Vegan_pizza rdf:type owl:Class ;
+             rdfs:subClassOf :Pizza .
+
+
+###  http://www.semanticweb.org/alexis/ontologies/pizza#Vegetable_topping
+:Vegetable_topping rdf:type owl:Class ;
+                   rdfs:subClassOf :Pizza_topping .
+
+
+#################################################################
+#    General axioms
+#################################################################
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( :Cheese_topping
+                :Fish_topping
+                :Fruit_topping
+                :Meet_topping
+                :Vegetable_topping
+              )
+] .
+
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( :Ham_topping
+                :Pepperoni_topping
+                :Spicy_beef_topping
+              )
+] .
+
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( :Hot_value
+                :Medium_value
+                :Mild_value
+              )
+] .
+
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( :Onion_topping
+                :Soja_steak_topping
+                :Tomato_topping
+              )
+] .
+
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( :Pizza
+                :Pizza_base
+                :Pizza_topping
+              )
+] .
+
+
 ###  Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi
