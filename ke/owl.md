@@ -285,5 +285,5 @@ L'implication de tout cela est que vous êtes en train d'assister à l'émergenc
 Si une base de données externe vous autorise à consulter ses données avec des requêtes SPARQL, on dit alors que c'est un **endpoints** SPARQL. Grosso modo, vous pouvez requêter la base avec des requêtes et récupérer les données qui vous intéresse, tout en pouvant exploiter les implications logiques.
 
 {% hint style="info" %}
-[MusicBrainz](https://wiki.musicbrainz.org/LinkedBrainz) et [WikiData](https://query.wikidata.org/) sont deux exemples bien connu.
+[MusicBrainz](https://wiki.musicbrainz.org/LinkedBrainz) et [WikiData](https://query.wikidata.org/) sont deux exemples bien connus.
 {% endhint %}
