@@ -72,13 +72,13 @@ Tous les Étudiants sont des Personnes
 Il y a deux types de personnes : des XX (Femme) et des XY (Homme).
 
 
-## Propriétés des relations
+## Spécialisation des propriétés
 
-Un propriété, appliquée à une relation, la conditionne et lui induit des contraintes supplémentaires qui seront utilisées lors du raisonnement.
+Spécialiser une propriété la conditionne et lui induit des contraintes supplémentaires qui seront utilisées lors du raisonnement.
 
-Ce n'est pas obligatoire d'attribuer à une relation une propriété, mais cela peut aider à renforcer les contraintes d'intégrité du système que vous êtes en train de décrire.
+Ce n'est pas obligatoire d'attribuer à une spécialisation à une propriété, mais cela peut aider à renforcer les contraintes d'intégrité du système que vous êtes en train de décrire.
 
-Une relation peut donc avoir aucune, une ou plusieurs propriétés à la fois. Elles sont au nombres de 5 :
+Une peut peut avoir aucune, une ou plusieurs spécialisations à la fois. Elles sont au nombres de 5 :
 
 * Transitive (`owl;TransitiveProperty`)
 * Symétrique (`owl;SymetricProperty`)
@@ -133,7 +133,7 @@ Autrement dit, si une propriété est symétrique, elle est vraie ou fausse, qu'
 >   <adjacentRegion rdf:resource="#SonomaRegion" />
 > </Region>
 > ```
-> Ici, on définit en plus de la relation `locatedIn` la relation `adjacentRegion`, qui à pour domaine une `Region` et une portée de `Region`. La région `MendocinoRegion` est définie comme adjacente à la région `SonomaRegion`. On peut donc **en déduire** que `SonomaRegion` est aussi adjacente à `MendocinoRegion`. Par contre, il n'y a pas symétricité pour la relation `locatedIn CaliforniaRegion` concernant `SonomaRegion` : on n'a aucune information d'où elle est située.
+> Ici, on définit en plus de la propriété `locatedIn` la propriété `adjacentRegion`, qui à pour domaine une `Region` et une portée de `Region`. La région `MendocinoRegion` est définie comme adjacente à la région `SonomaRegion`. On peut donc **en déduire** que `SonomaRegion` est aussi adjacente à `MendocinoRegion`. Par contre, il n'y a pas symétricité pour la propriété `locatedIn CaliforniaRegion` concernant `SonomaRegion` : on n'a aucune information d'où elle est située.
 
 ### Fonctionnelle
 
@@ -155,10 +155,10 @@ Exemple :
 >   <rdfs:range  rdf:resource="#VintageYear" />
 > </owl:ObjectProperty>
 > ```
-> Ici la fonction `hasVintageYear` (a un millésime) est fonctionnelle. Un vin ne peut avoir qu'un seul millésime, pas plus. Aussi, une entité `Vintage` ne pourra associée sémantiquement qu'à une seule année `VintageYear` via la relation `hasVintageYear`.
+> Ici la fonction `hasVintageYear` (a un millésime) est fonctionnelle. Un vin ne peut avoir qu'un seul millésime, pas plus. Aussi, une entité `Vintage` ne pourra associée sémantiquement qu'à une seule année `VintageYear` via la propriété `hasVintageYear`.
 
 {% hint style="danger" %}
-Bien que la différence soit ténue, être fonctionnelle n'est pas pareil que de limiter une classe à n'avoir une relation qu'avec une autre classe ! La fonctionnalité, c'est plutôt une "unicité sémantique de l'individualisation de la portée d'un prédicat".
+Bien que la différence soit ténue, être fonctionnelle n'est pas pareil que de limiter une classe à n'avoir une propriété qu'avec une autre classe ! La fonctionnalité, c'est plutôt une "unicité sémantique de l'individualisation de la portée d'un prédicat".
 {% endhint %}
 
 ### Inverse de
@@ -183,10 +183,10 @@ Autrement dit, on sait que si $$P1$$ est vraie, alors $$P2$$ l'est elle aussi.
 
 Si une propriété $$P$$ est spécifiée comme inverse fonctionnelle, alors $$\forall x, y, z$$ on a : $$P(y,x) \wedge P(z,x) \rightarrow y = z$$.
 
-Autrement dit, l'unicité sémantique s'établie sur le domaine de la relation, et non plus sur sa portée (à l'inverse de [Fonctionnelle](owl.md/#fonctionnelle)).
+Autrement dit, l'unicité sémantique s'établie sur le domaine de la propriété, et non plus sur sa portée (à l'inverse de [Fonctionnelle](owl.md/#fonctionnelle)).
 
 {% hint style="warning" %}
-L'inverse d'une relation fonctionnelle doit toujours être qualifiée comme fonctionnelle inverse, et pas seulement l'[Inverse de](owl.md/#inverse-de), afin de conserver la sémantique véhiculée.
+L'inverse d'une propriété fonctionnelle doit toujours être qualifiée comme fonctionnelle inverse, et pas seulement l'[Inverse de](owl.md/#inverse-de), afin de conserver la sémantique véhiculée.
 {% endhint %}
 
 *Exemple :*
@@ -198,7 +198,7 @@ L'inverse d'une relation fonctionnelle doit toujours être qualifiée comme fonc
 >   <owl:inverseOf rdf:resource="#hasMaker" />
 > </owl:ObjectProperty>                                     ¬ 
 > ```
-> Notez que dans cette exemple, la relation précédemment vue dans [Inverse de](owl/#inverse-de) est qualifiée ici comme fonctionnelle inverse. Puisqu'un vin ne peut être produit que par une seule classe, si pour un vin donné on se retrouve avec deux producteurs différents, cela veut dire que c'est forcément les mêmes.
+> Notez que dans cette exemple, la propriété précédemment vue dans [Inverse de](owl/#inverse-de) est qualifiée ici comme fonctionnelle inverse. Puisqu'un vin ne peut être produit que par une seule classe, si pour un vin donné on se retrouve avec deux producteurs différents, cela veut dire que c'est forcément les mêmes.
 
 ## Représentation des ontologies
 
