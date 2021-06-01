@@ -12,8 +12,8 @@ Les géants du web ont depuis bien longtemps abandonnés les SGBD relationnels c
 
 ![Détail partiel de la base de données de Wikipedia](assets/wiki_bdd.png)
 
-Dans tout les cas, des choix concernant comment représenter l'information doivent être fait, et des liens entre ces informations doivent apparaître. Mais ce n'est pas pour autant que l'information est **sémantisée**. Les relations ne sont pas explicites, et il n'y a aucune implication logique entre les différents éléments.
+Dans tous les cas, des choix concernant comment représenter l'information doivent être faits, et des liens entre ces informations doivent apparaître. Mais ce n'est pas pour autant que l'information est **sémantisée**. Les relations ne sont pas explicites, et il n'y a aucune implication logique entre les différents éléments.
     
-C'est aux concepteurs d'interpréter, de raisonner et d'inférer l'informations qui existent dans ces modèles. C'est d'ailleurs une limitation importante lorsque l'on veut utiliser des données disponibles dans des moteurs d'inférences : il faut préalablement traiter la données, par exemple en la labélisant, pour ensuite pour l'exploiter, ainsi que définir les règles entre ces données.
+C'est aux concepteurs d'interpréter, de raisonner et d'inférer l'informations qui existent dans ces modèles. C'est d'ailleurs une limitation importante lorsque l'on veut utiliser des données disponibles dans des moteurs d'inférences : il faut préalablement traiter la donnée, par exemple en la labélisant, pour ensuite pour l'exploiter, ainsi que définir les règles entre ces données.
 
 D'autres paradigmes sont bien plus efficaces pour l'ingénierie des connaissances, notamment sur le plan du raisonnement de l'information.

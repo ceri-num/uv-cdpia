@@ -18,7 +18,7 @@ modifier_property
 ```
 
 {% hint style="warning" %}
-N'oubliez pas de sélectionner `owl:topObjectProperty` avant de faire appelle au COPH pour que les deux propriétés créées se retrouvent bien "en dedans" (soit subsumées).
+N'oubliez pas de sélectionner `owl:topObjectProperty` avant de faire appel au COPH pour que les deux propriétés créées se retrouvent bien "en dedans" (soit subsumées).
 {% endhint %}
 
 ## Les propriétés de notre modèle
@@ -27,7 +27,7 @@ Maintenant que nos deux propriétés principales sont créées, nous allons nous
 
 ### Les propriétés relationnelles
 
-On l'a vue lors de l'[élaboration de notre dictionnaire](step1.md), on va vouloir représenter le fait qu'une pizza possède une (ou plusieurs) garniture, ainsi qu'une pâte.
+On l'a vu lors de l'[élaboration de notre dictionnaire](step1.md), on va vouloir représenter le fait qu'une pizza possède une (ou plusieurs) garniture, ainsi qu'une pâte.
 
 Aussi, cliquez sur `relational_property` puis dans le COPH, rajoutez simplement
 
@@ -41,12 +41,12 @@ Maintenant que les deux propriétés relationnelles existent, on va les spécial
 1. Cliquez sur l'onglet `Property matrix` ;
 2. Sélectionnez d'abord la propriété `has_topping` (surbrillance bleue) :
 3. * On va dire d'où elle "part". Dans la colonne `Domain`, tapez `Pizza` (un `Ctrl + Espace` vous fait une auto-complétion). C'est la pizza qui est concernée par la garniture !
-3. * Posséder de la garniture signifie qu'on parle de garniture ! Dans la colonne `Range`, tapez `Pizza_topping`. Et voila, maintenant, on englobe toutes les sortes de garnitures (fromage, viandes, etc.).
-3. * Indiquez cette propriété comme étant inversement fonctionnelle en cochant la boite correspondante (c'est la garniture qui conditionne le type de pizza)
-4. Sélectionnez la propriété `has_base` :
-4. * Dans `Domain`, indiquez `Pizza` ;
-4. * Dans `Range`, indiquez `Pizza_base` ;
-4. * Dans les propriétés cochez fonctionnelle et inversement fonctionnelle (on individualise les deux côtés)
+4. * Posséder de la garniture signifie qu'on parle de garniture ! Dans la colonne `Range`, tapez `Pizza_topping`. Et voilà, maintenant, on englobe toutes les sortes de garnitures (fromage, viandes, etc.).
+5. * Indiquez cette propriété comme étant inversement fonctionnelle en cochant la boite correspondante (c'est la garniture qui conditionne le type de pizza)
+6. Sélectionnez la propriété `has_base` :
+7. * Dans `Domain`, indiquez `Pizza` ;
+8. * Dans `Range`, indiquez `Pizza_base` ;
+9. * Dans les propriétés cochez fonctionnelle et inversement fonctionnelle (on individualise les deux côtés)
 
 ### Les propriétés de mutabilité
 
@@ -68,4 +68,4 @@ Dans cette partie, vous venez de créer vos premières propriétés (relations) 
 
 ![Le résultat de cette partie. Faîtes attention aux propriétés de vos relations](assets/properties_matrix.png)
 
-Vous avez également appris qu'associer une relation à une classe qui en subsument d'autres impliquent que ces mêmes **classes subsumées sont aussi concernées** par cette relation ! C'est pour cela qu'on va pouvoir par exemple associé à une pizza fromage la garniture fromage, alors que nous avons seulement spécifié les relations avec les classes "parentes".
+Vous avez également appris qu'associer une relation à une classe qui en subsument d'autres impliquent que ces mêmes **classes subsumées sont aussi concernées** par cette relation ! C'est pour cela qu'on va pouvoir par exemple associér à une pizza fromage la garniture fromage, alors que nous avons seulement spécifié les relations avec les classes "parentes".

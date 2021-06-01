@@ -18,7 +18,7 @@ Pizza_topping
 Pizza_base
 ```
 {% hint style="info" %}
-Laissez la boîte coché pour les classes disjointes. Chaque élément est bien disjoint des autres !
+Laissez la boîte cochée pour les classes disjointes. Chaque élément est bien disjoint des autres !
 {% endhint %}
 
 Le tout devrait ressembler à cela

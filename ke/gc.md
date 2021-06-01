@@ -41,7 +41,7 @@ Si on regarde plus en détail le graphe conceptuel suivant...
  Qui, ensuite, pourrait se traduire comme un énoncé en *FOL* : $$\exists x,y\hspace{0.1cm} (Sitting(x) \wedge Mat(y)) \wedge ( Cat(Elsie) \wedge Agent(x, Elsie)) \wedge Location(x,y)$$.
 
 {% hint style="success" %}
-Puisque un GC est bijectif, il est possible d'utiliser un moteur d'inférence sur ces formules (*a.k.a.* algorithme de simulation des raisonnements déductifs, cf. [FOL-Inférence](fol.md/#inference)). On peut donc obtenir des conclusions supplémentaires en fonctions des noeuds et des relations conceptuelles : pratique pour **enrichir** la donnée ou **identifier** des inconsistences.
+Puisque un GC est bijectif, il est possible d'utiliser un moteur d'inférence sur ces formules (*a.k.a.* algorithme de simulation des raisonnements déductifs, cf. [FOL-Inférence](fol.md/#inference)). On peut donc obtenir des conclusions supplémentaires en fonctions des noeuds et des relations conceptuelles : pratique pour **enrichir** la donnée ou **identifier** des inconsistances.
 {% endhint %}
 
 ## Raisonner seulement *via* les GC

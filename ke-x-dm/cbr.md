@@ -23,7 +23,7 @@ Le CBR est un type de raisonnement très intuitif, basé sur un "meta-schéma" c
 ![Schéma du raisonnement à partir de cas, réalisée par Lin Ma](assets/cbr_lifecycle.png)
 
 {% hint style="info" %}
-Le cycle du CBR est généralement associé aux utilisateurs. Les cas solutionnés sont ainsi souvent proposés à l'utilisateur pour prise de décision et révision avant d'être appliqué. Néanmoins, le CBR s'applique aussi à des systèmes automatisés : l'action est directement effectuée, et la réaction de l'environnement sur le système est déduit dans la révision pour future correction.
+Le cycle du CBR est généralement associé aux utilisateurs. Les cas solutionnés sont ainsi souvent proposés à l'utilisateur pour prise de décision et révision avant d'être appliqués. Néanmoins, le CBR s'applique aussi à des systèmes automatisés : l'action est directement effectuée, et la réaction de l'environnement sur le système est déduite dans la révision pour future correction.
 {% endhint %}
 
 ### Remémoration
@@ -36,15 +36,15 @@ Il est donc nécessaire de ne pas être trop générique, ni trop spécifique da
 
 ### Réutilisation
 
-L'étape de réutilisation consiste à se servir du cas remémoré pour résoudre le problème actuel. Pour cela, l'ancien cas est souvent **adapté** pour correspondre exactement à la situation. Cette adaptation, là encore, si automatisé (comme souvent), repose bien souvent sur des mécanismes d'ingénierie des connaissances, notamment les [chaînages](../ke/fol.md/#inference).
+L'étape de réutilisation consiste à se servir du cas remémoré pour résoudre le problème actuel. Pour cela, l'ancien cas est souvent **adapté** pour correspondre exactement à la situation. Cette adaptation, là encore, si automatisée (comme souvent), repose bien souvent sur des mécanismes d'ingénierie des connaissances, notamment les [chaînages](../ke/fol.md/#inference).
 
-Néanmoins, l'on peut très bien imaginer un système demandant à l'utilisateur quel cas lui semble le plus adapter dans une situation donnée. 
+Néanmoins, l'on peut très bien imaginer un système demandant à l'utilisateur quel cas lui semble le plus adapté dans une situation donnée. 
 
 ### Révision
 
 L'étape de révision consiste à modifier le cas (remémoré + réutilisé/adapté automatiquement) *a posteriori* de son utilisation. Cela permet de corriger le cas pour qu'il soit le plus approprié possible à la situation, une fois le retour de l'environnement effectué (par exemple, freiner plus fort).
 
-Cette étape reçoit de manière coutumière l'intervention humaine, qui permet d'ajuster finement les règles et les paramètres du cas aux observations. Le cas peut éventuellement être rejoué pour de meilleur résultat, si le contexte le permet.
+Cette étape reçoit de manière coutumière l'intervention humaine, qui permet d'ajuster finement les règles et les paramètres du cas aux observations. Le cas peut éventuellement être rejoué pour de meilleurs résultats, si le contexte le permet.
 
 ### Mémorisation
 

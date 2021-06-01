@@ -201,7 +201,7 @@ Exemple :
 >   <rdfs:range  rdf:resource="#VintageYear" />
 > </owl:ObjectProperty>
 > ```
-> Ici la fonction `hasVintageYear` (a un millésime) est fonctionnelle. Un vin ne peut avoir qu'un seul millésime, pas plus. Aussi, une entité `Vintage` ne pourra associée sémantiquement qu'à une seule année `VintageYear` via la propriété `hasVintageYear`.
+> Ici la fonction `hasVintageYear` (a un millésime) est fonctionnelle. Un vin ne peut avoir qu'un seul millésime, pas plus. Aussi, une entité `Vintage` ne pourra être associée sémantiquement qu'à une seule année `VintageYear` via la propriété `hasVintageYear`.
 
 {% hint style="danger" %}
 Bien que la différence soit ténue, être fonctionnelle n'est pas pareil que de limiter une classe à n'avoir une propriété qu'avec une autre classe ! La fonctionnalité, c'est plutôt une "unicité sémantique de l'individualisation de la portée d'un prédicat".

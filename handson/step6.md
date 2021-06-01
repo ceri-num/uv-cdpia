@@ -76,6 +76,6 @@ On aurait donc aussi pu l'écrire `has_topping only (Fruit_topping or Vegetable_
 
 ## Qu'est-ce qu'on vient de faire ?
 
-Dans cette section, on a vue comment créer des classes à partir d'expressions plus complexe. 
+Dans cette section, on a vu comment créer des classes à partir d'expressions plus complexe. 
 
 On a également vu comment exploiter les notions d'ensemble pour construire les classes (disjonction, conjonction, etc.).

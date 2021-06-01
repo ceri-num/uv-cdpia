@@ -2,7 +2,7 @@
 
 ## Utiliser le raisonneur
 
-L'ontologie n'est pas considérée comme complète tant que vous ne l'avez pas classifiée et vérifiée ! Autrement dit, vous allez lancer un raisonneur sur votre ontologie, et ce dernier va vérifier les inconsistences éventuelles, identifier les éléments qui sont équivalents, trouver de nouvelles informations à partir de votre base de faits, etc.
+L'ontologie n'est pas considérée comme complète tant que vous ne l'avez pas classifiée et vérifiée ! Autrement dit, vous allez lancer un raisonneur sur votre ontologie, et ce dernier va vérifier les inconsistances éventuelles, identifier les éléments qui sont équivalents, trouver de nouvelles informations à partir de votre base de faits, etc.
 
 {% hint style="danger" %}
 Il est important de sauvegarder votre travail ! Faîtes le ici si ce n'est pas déjà fait !
@@ -19,7 +19,7 @@ Dans l'[étape 6](step6.md/#fermons-notre-margarita) concernant la margarita vou
 En réalité, il n'existe aucun individu capable de respecter les quatres critères que nous avons énoncé, d'où le `owl:Nothing`. Pour régler se problème, vous devez **relaxer** les contraintes : remplacer le `and` par un `or`, relancer votre raisonneur, et votre ontologie passe ! Yay !
 
 {% hint style="info" %}
-Pourquoi cette erreur ? Rappelez vous : nous avons définis `Cheese_topping` et `Tomato_topping` comme disjoint, donc ils ne peut pas y avoir d'intersection ! Il est fort ce raisonneur !
+Pourquoi cette erreur ? Rappelez vous : nous avons définis `Cheese_topping` et `Tomato_topping` comme disjoint, donc il ne peut pas y avoir d'intersection ! Il est fort ce raisonneur !
 {% endhint %}
 
 ## Un mot sur la A-Box

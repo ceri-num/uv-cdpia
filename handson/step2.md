@@ -11,7 +11,7 @@ Dans cette section, on va simplement créer notre ontologie en la nommant, et cr
 5. Sauvegarder votre ontologie (soit en format `Turtle` soit en format `RDF/XML`).
 
 {% hint style="info" %}
-Il est préférable de conserver le "préfixe" `http://www.semanticweb.org/YOURNAME/ontologies/` et y adjoindre le nom de votre ontologie. Tout vos noms seront associés à cette IRI, par exemple `http://www.semanticweb.org/YOURNAME/ontologies/PIZZA/Thick_crust`.
+Il est préférable de conserver le "préfixe" `http://www.semanticweb.org/YOURNAME/ontologies/` et y adjoindre le nom de votre ontologie. Tous vos noms seront associés à cette IRI, par exemple `http://www.semanticweb.org/YOURNAME/ontologies/PIZZA/Thick_crust`.
 
 L'intérêt de ça est que, si vous avez un endpoint et/ou un entrepôt pour stocker votre ontologie, quand vous déréférencerez votre IRI, vous obtiendrez exactement l'élément ciblé (par exemple la pâte épaisse).
 {% endhint %}
@@ -21,7 +21,7 @@ L'intérêt de ça est que, si vous avez un endpoint et/ou un entrepôt pour sto
 1. Cliquez sur l'onglet `Entité` puis allez dans `Classes` (couleur des fenêtres : jaune) ;
 2. Sélectionnez l'entité `owl:Thing` (avec un clique gauche ; le volet de droite doit se mettre à jour);
 3. Aller ensuite de le menu `Tool` tout en haut, et cliquez sur `Create class hierarchy...`
-4. Remplissez le text field avec le contenu suivant (attention au indentation !)
+4. Remplissez le text field avec le contenu suivant (attention aux indentations !)
 ```
 Domain_entity
 	Independent_entity

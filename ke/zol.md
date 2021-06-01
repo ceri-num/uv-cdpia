@@ -2,12 +2,14 @@
 
 ## Introduction
 
-une proposition est une assertion ayant une valeur de vérité déterminable.
+La logique propositionnelle (ou d'ordre 0) - **ZOL** - permet d'énoncé des faits.
+
+Une proposition est une assertion ayant une valeur de vérité déterminable.
 Valeur de vérité : 0 ou 1
 
 Par exemple, $$1+1=2$$, Lille est dans le Sud de la France...
 
-À quoi ça sert ? représenter logiquement de l'information, et pouvoir tirer des conclusions de l'agencement de ces proposition lorsqu'on les évalue.
+À quoi ça sert ? représenter logiquement de l'information, et pouvoir tirer des conclusions de l'agencement de ces propositions lorsqu'on les évalue.
 
 Allons survoler un peu tout ça.
 

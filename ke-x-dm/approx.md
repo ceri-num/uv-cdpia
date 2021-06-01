@@ -14,8 +14,8 @@ Ce type de raisonnement permet de produire des résultats non-exacts ; pratique 
 
 À partir d'une ontologie, il est possible de définir des **métriques** et des **caractéristiques** dépendantes de la position des classes de l'ontologie les uns par rapport aux autres, en fonction des relations qu'ils partagent. Cela permet notamment :
 
-* De dériver **approximativement** le type et les propriétés d'une classe qu'on insère dans la base de connaissance et dont on a aucun connaissance *a priori* ;
-* De **supposer** d'inconsistences et de propriétés ;
+* De dériver **approximativement** le type et les propriétés d'une classe qu'on insère dans la base de connaissance et dont on a aucune connaissance *a priori* ;
+* De **supposer** d'inconsistances et de propriétés ;
 * D'étendre l'espace de recherche.
 
 ![Illustration d'une approximation sémantique basée sur la taxonomie, [Lebis19].](assets/approx_sem_by_distance.png)
@@ -40,7 +40,7 @@ L'avantage de cette approche est que l'on peut remonter la chaîne prototypal d'
 
 À l'instar du parcours en largeur taxonimique du graphe ontologique des entités, on peut envisager un parcours en largeur basé sur la notion de synonymie.
 
-Certains termes de l'ontologie se voient attribuer des relations de synonymies, ce qui nous permet d'aller explorer certaines autres parties du graphes jusqu'alors inaccessible.
+Certains termes de l'ontologie se voient attribuer des relations de synonymies, ce qui nous permet d'aller explorer certaines autres parties du graphes jusqu'alors inaccessibles.
 
 *Exemple :*
 > Si dans l'ontologie, on ajoute un concept où l'on a très peu de connaissance experte *a priori* - ici disons le concept de `Tesseract`. Tout ce que l'on sait, c'est qu'il s'agit d'un synonyme de `Cube Multi-dimensionnel` : on peut alors espérer dériver des informations de `Cube` lorsque l'on parlera de `Teseract`, sans pour autant en être sûr à 100%.
@@ -51,7 +51,7 @@ Certains termes de l'ontologie se voient attribuer des relations de synonymies, 
 
 ## Métriques
 
-Le but de quantifier l'approximation est d'indiquer le fait que, plus l'on s'éloigne de l'entité initiale, plus la pertinence de la relation risque de s'être dégradé ; aussi, lorsqu'on présente le résultat ou qu'on l'utilise, il faut savoir si l'on peut lui "faire confiance".
+Le but de quantifier l'approximation est d'indiquer le fait que, plus l'on s'éloigne de l'entité initiale, plus la pertinence de la relation risque de s'être dégradée ; aussi, lorsqu'on présente le résultat ou qu'on l'utilise, il faut savoir si l'on peut lui "faire confiance".
 
 ### Calcul
 

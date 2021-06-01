@@ -2,7 +2,7 @@
 
 ## Introduction
 
-Avec la logique des prédicats (ou d'ordre 1) on passe un cran au dessus en terme d'expressivité des phrases, puisqu'il est possible d'exprimer, entre autre, la notion de variabilité dans une proposition, qui se nomme alors un **prédicat** (smullyan1995first). Incidemment, elle devient plus difficilement satisfiable.
+Avec la logique des prédicats (ou d'ordre 1) - **FOL** - on passe un cran au dessus en terme d'expressivité des phrases, puisqu'il est possible d'exprimer, entre autre, la notion de variabilité dans une proposition, qui se nomme alors un **prédicat** (smullyan1995first). Incidemment, elle devient plus difficilement satisfiable.
 
 Avec cette logique, on peut totalement modéliser des systèmes complexes, capables d'exploiter une base de connaissances et de faits pour raisonner efficacement et produire de l'information.
 
@@ -128,7 +128,7 @@ Le chaînage arrière fonctionne pareil, à la différence qu'au lieu de partir 
 {% endhint %}
 
 *Exemple 2 (chaînage mixte):*
-> De tels inférences peuvent rapidement devenir utiles en situation réelle. Admettons que vous avez, sur une chaîne de production, cinq machines différentes (*i.e.* qui font des actions différentes) :
+> De telles inférences peuvent rapidement devenir utiles en situation réelle. Admettons que vous avez, sur une chaîne de production, cinq machines différentes (*i.e.* qui font des actions différentes) :
 > 
 > * `pli(b,c)`
 > * `cut(c,b)`

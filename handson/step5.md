@@ -46,9 +46,9 @@ Attention à ne pas affecter à une classe parente de valeur de piment ; ce sera
 
 ### Renseigner la composition de la pizza
 
-On va maintenant s'intéresser à la composition des pizzas ; néanmoins, on ne vas pas toutes les définir ici car nous en utiliserons certaines pour présenter des expressions plus complexe par la suite.
+On va maintenant s'intéresser à la composition des pizzas ; néanmoins, on ne vas pas toutes les définir ici car nous en utiliserons certaines pour présenter des expressions plus complexes par la suite.
 
-Intéressons nous à la margarita : indiquez qu'elle est composé de `Tomato_topping` et de `Mozarella_topping`. Vous pouvez séparer les éléments avec une `,` (virgule).
+Intéressons nous à la margarita : indiquez qu'elle est composée de `Tomato_topping` et de `Mozarella_topping`. Vous pouvez séparer les éléments avec une `,` (virgule).
 
 Laissons le reste comme cela pour le moment !
 
