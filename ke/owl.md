@@ -107,7 +107,7 @@ Concrètement, en utilisant la T-Box conjointement avec votre A-Box, cela permet
 Dans le dernier exemple, si votre T-Box est bien construite, par exemple :
 
 * $$\text{foillageOf} : \text{Leaf} \mapsto \text{Tree}$$ (**T-Box**)
-* $$\text{hasFoillageType} : \text{Cinnamomum_Camphora} \mapsto ( \text{MonoLob_Leaf} \wedge \text{Ovoïd} )$$ (**T-Box**)
+* $$\text{hasLeafType} : \text{Cinnamomum_Camphora} \mapsto ( \text{MonoLob_Leaf} \wedge \text{Ovoïd} )$$ (**T-Box**)
 * $$\text{foillageOf} : \text{MyLeaf} \mapsto \text{MyCinnamomum}$$ (**A-Box**)
 * $$\text{typeOf} : \text{MyCinnamomum} \mapsto \text{Cinnamomum_Camphora}$$ (**A-Box**)
 
@@ -248,7 +248,42 @@ L'inverse d'une propriété fonctionnelle doit toujours être qualifiée comme f
 
 ## Représentation des ontologies
 
-RDF et rdfs et turtle
+Brièvement, une ontologie est décrite à l'aide de deux langage principaux : [RDF (Ressource Description Framework)](https://fr.wikipedia.org/wiki/Resource_Description_Framework) et [RDFS (Ressource Description Framework - Schema)](https://fr.wikipedia.org/wiki/RDF_Schema). Ces deux langages sont standardisés par la W3C et largement utilisé. 
 
-## Vers du web sémantique : Requêtage et "Endpoints"
+{% hint style="info" %}
+[Turtle](https://fr.wikipedia.org/wiki/Turtle_(syntaxe)) est également largement répandu pour décrire des ontologies. Il s'agit d'un langage bijectif avec RDF qui permet de représenter de manière un peu moins verbeux les différents triplets RDF et aussi plus "humainement" compréhensible.
+{% endhint %}
 
+### RDF
+
+RDF est un langage de description de multigraphes orientés qui gère la description et les méta-données pour le web sémantique. Sa syntaxe est simple et repose toujours sur trois éléments : **sujet**, **prédicat** et **objet**, et s'exprime généralement comme `prédicat(sujet, objet)`.
+
+Il est injectif dans la logique de premier ordre ; plus particulièrement il est bijectif avec la logique de premier ordre positive, conjonctive et existentielle :
+
+$$\text{predicat(sujet,objet)} \leftrightarrow \exist \text{sujet}, \exist{objet}, \text{predicat(sujet,objet)}$$
+
+Les différentes entités de l'ontologie (*i.e.* classes et propriétés) sont toutes identifiées par une **[URI](https://fr.wikipedia.org/wiki/Uniform_Resource_Identifier)**, ce qui permet de les déréférencés en ligne (il peut tout de même y avoir des entités anonymes).
+
+### RDFS
+
+RDFS quand à lui est un langage **extensible** qui permet de structurer les ressources décrites en RDF et apporte des concepts de bases pour les ontologies : `rdfs:subClassOf` et `rdfs:Class` pour les classes et surtout `rdfs:domain` et `rdfs:range` pour les propriétés !
+
+Il est donc le canvas de votre ontologie.
+
+{% hint style="success" %}
+RDFS (et un schéma de votre ontologie) est donc indispensable pour que votre ontologie soit utilisable !
+{% endhint %}
+
+### Triplestore, requêtage et endpoints
+
+Grâce à RDF/RDFS, il est possible d'entreposer vos ressources dans des bases de données appelées **triplestores**.
+
+L'avantage de cela, ce qu'il devient possible d'utiliser les mécanismes d'implications et de logiques dans vos requêtes pour consulter vos données. Le langage de requête standardisé pour consulter du RDF/S est **SPARQL**.
+
+L'implication de tout cela est que vous êtes en train d'assister à l'émergence d'un écosystème à part entière, où des ressources fortement sémantisées peuvent être hébergées dans des bases de données, et dont le format permet de raisonner avec la machine.
+
+Si une base de données externe vous autorise à consulter ses données avec des requêtes SPARQL, on dit alors que c'est un **endpoints** SPARQL. Grosso modo, vous pouvez requêter la base avec des requêtes et récupérer les données qui vous intéresse, tout en pouvant exploiter les implications logiques.
+
+{% hint style="info" %}
+[MusicBrainz](https://wiki.musicbrainz.org/LinkedBrainz) et [WikiData](https://query.wikidata.org/) sont deux exemples bien connu.
+{% endhint %}
