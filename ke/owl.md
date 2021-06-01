@@ -6,7 +6,33 @@
 Soyez attentif, on pratiquera sur les ontologies dans la section de [Mise en pratique](../handson/tuto.md).
 {% endhint %}
 
-bla
+L'ontologie, quelque soit le contexte dans lequel on la considère est un concept complexe à assimiler. On retrouve initialement le concept d'ontologie en philosophie, qui se définit comme :
+
+> Partie de la philosophie qui a pour objet l'étude des propriétés les plus générales de l'être, telles que l'existence, la possibilité, la durée, le devenir. [CNRTL](https://www.cnrtl.fr/lexicographie/ontologie)
+
+En informatique, la notion d'ontologie change quelque peut. Elle conserve sont caractère descriptif afin de capter les interrelations qui existent au sein d'une sous-partie d'un monde observé ; mais elle introduit surtout une notion forte de modélisation des éléments qui constituent ces interrelations : les "objets" et les "relations" qu'ils ont.
+
+{% hint style="success" %}
+En un sens, une ontologie est un framework conceptuel d'un domaine précis, permettant de modéliser les éléments du discours, leurs relations et leurs caractéristiques sous la forme d'un graphe $$\mathcal{G}=(V,E)$$ où $$V$$ sont les éléments, et $$E$$ les relations.
+{% endhint %}
+
+La particularité d'une ontologie est qu'elle est bien plus qu'une simple taxonomie ; elle l'est d'une part : c'est un graphe qui décrit la hiérarchie des concepts (éléments **et** relations) impliqués. Ainsi, les concepts qui interviennent en bas de la taxonomie "héritent" des propriétés de leurs ancêtres.
+
+Mais c'est également une taxonomie enrichie de relations logiques complexes qui interviennent entre les éléments du discours, comme l'appartenance à des groupes d'éléments, la symétrie d'une relation, l'exclusivité d'une relation et plein d'autres éléments.
+
+{% hint style="info" %}
+On peut en effet faire de l'"héritage" sur les relations également ! Par exemple dire que `hasVeryGoodFriend(x,y)` "hérite" de `hasFriend(x,y)`.
+{% endhint %}
+
+{% hint style="info" %}
+On ne parle pas d'héritage, mais de subsomption ici.
+{% endhint %}
+
+Parmi ce concept existe les **ontologies pour le web sémantique**. Il s'agit d'un type d'ontologie particulier qui s'intéresse principalement à la cohérence logique et l'expressivité des éléments décrits pour **permettre le raisonnement automatique**. Pour cela, les langages de description de ces ontologies utilisent la [logique de premier ordre](fol.md) pour modéliser l'univers $$\Omega$$ qui nous intéresse. Conséquemment, les ontologies permettent de simuler le processus cognitif humain, ce qui les rend très pratiques pour les incorporer dans des processus d'IA où l'explicabilité et des relations complexes sont de mises.
+
+{% hint style="info" %}
+Dans la suite, par le terme ontologie, on fera référence aux ontologies du web sémantiques.
+{% endhint %}
 
 ![Visualisation de l'ontologie Friend of a Friend (FOAF) grâce à WEBVOWL](assets/foaf_vowl.png)
 
