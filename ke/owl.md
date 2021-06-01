@@ -69,7 +69,7 @@ On remarque également des propriétés avec des encarts verts pointant vers des
 
 Vous pouvez être en train de vous demander au vue du discours précédent comment différencier les concepts que l'on souhaite modéliser (*e.g.* le concept d'arbre), et la modélisation de l'observation d'un **individu spécifique** de cette classe (*e.g.* l'arbre dans votre jardin).
 
-Les ontologies, grossièrement, sont découpée en deux parties pour permettre cela : une partie "conceptuelle", appelée **T-Box** (pour terminological component) et une partie "faits", appelée **A-Box** (pour assertion component), pour modéliser les instances des classes.
+Les ontologies, grossièrement, sont découpée en deux parties pour permettre cela : une partie "conceptuelle", appelée **T-Box** (pour terminological component) et une partie "faits", appelée **A-Box** (pour assertion component), pour modéliser les instances des classes et raisonner dessus.
 
 ### Terminological component
 
@@ -90,17 +90,33 @@ Les descriptions y sont peut être génériques, mais elles peuvent être très 
 
 ### Assertion component
 
-```rdf
-A est un B
-```
+La **A-Box** contient la modélisation de tous vos individus, **en fonction** de votre T-Box. Aussi, pour les décrire vous utiliserez des classes et des relations qui proviennent de votre description.
 
-```rdf
-Bob est un Homme
-```
+*Exemple :*
+> ```rdf
+> Bob est un Homme
+> ```
+> 
+> ```rdf
+> Cette feuille appartient à mon arbre de jardin, qui est un *Cinnamomum Camphora*.
+> ```
 
-Concrètement, cela permet de raisonner
+Concrètement, en utilisant la T-Box conjointement avec votre A-Box, cela permet de raisonner sur les faits que vous décrivez et d'inférer de nouvelles informations, ainsi que de trouver d'éventuelles incohérences dans votre ontologie (ou dans la définition de vos individus).
 
-C'est cependant uniquement $$\text{T-Box} \cup \text{A-Box} = \Omega$$.
+{% hint style="success" %}
+Dans le dernier exemple, si votre T-Box est bien construite, par exemple :
+
+* $$\text{foillageOf} : \text{Leaf} \mapsto \text{Tree}$$ (**T-Box**)
+* $$\text{hasFoillageType} : \text{Cinnamomum_Camphora} \mapsto ( \text{MonoLob_Leaf} \wedge \text{Ovoïd} )$$ (**T-Box**)
+* $$\text{foillageOf} : \text{MyLeaf} \mapsto \text{MyCinnamomum}$$ (**A-Box**)
+* $$\text{typeOf} : \text{MyCinnamomum} \mapsto \text{Cinnamomum_Camphora}$$ (**A-Box**)
+
+Alors, on peut savoir que la feuille que j'ai ramassé de mon camphrier est mono-lobé et ovoïde, et que le camphrier est un arbre, qu'il possède des racines, produit du camphre, etc.
+{% endhint %}
+
+Cela nous permet de tirer des conclusions sur l'univers décrit.
+
+Attention cependant, car c'est l'union des deux box qui constitue l'univers que vous tentez de modéliser, t.q. : $$\Omega = \text{T-Box} \cup \text{A-Box}$$.
 
 ## Spécialisation des propriétés
 
