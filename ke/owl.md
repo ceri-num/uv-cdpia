@@ -251,7 +251,7 @@ L'inverse d'une propriété fonctionnelle doit toujours être qualifiée comme f
 Brièvement, une ontologie est décrite à l'aide de deux langage principaux : [RDF (Ressource Description Framework)](https://fr.wikipedia.org/wiki/Resource_Description_Framework) et [RDFS (Ressource Description Framework - Schema)](https://fr.wikipedia.org/wiki/RDF_Schema). Ces deux langages sont standardisés par la W3C et largement utilisé. 
 
 {% hint style="info" %}
-[Turtle](https://fr.wikipedia.org/wiki/Turtle_(syntaxe)) est également largement répandu pour décrire des ontologies. Il s'agit d'un langage bijectif avec RDF qui permet de représenter de manière un peu moins verbeux les différents triplets RDF et aussi plus "humainement" compréhensible.
+[Turtle](https://www.w3.org/TR/2014/REC-turtle-20140225/) est aussi largement répandu pour décrire des ontologies. Il s'agit d'un langage bijectif avec RDF qui permet de représenter de manière un peu moins verbeux les différents triplets RDF et aussi plus "humainement" compréhensible.
 {% endhint %}
 
 ### RDF
@@ -260,9 +260,9 @@ RDF est un langage de description de multigraphes orientés qui gère la descrip
 
 Il est injectif dans la logique de premier ordre ; plus particulièrement il est bijectif avec la logique de premier ordre positive, conjonctive et existentielle :
 
-$$\text{predicat(sujet,objet)} \leftrightarrow \exist \text{sujet}, \exist{objet}, \text{predicat(sujet,objet)}$$
+$$\text{predicat(sujet,objet)} \leftrightarrow \exists \text{sujet}, \exists \text{objet}, \text{predicat(sujet,objet)}$$
 
-Les différentes entités de l'ontologie (*i.e.* classes et propriétés) sont toutes identifiées par une **[URI](https://fr.wikipedia.org/wiki/Uniform_Resource_Identifier)**, ce qui permet de les déréférencés en ligne (il peut tout de même y avoir des entités anonymes).
+Les différentes entités de l'ontologie (*i.e.* classes et propriétés) sont toutes identifiées par une **[URI](https://fr.wikipedia.org/wiki/Uniform_Resource_Identifier)**, ce qui permet de les déréférencer en ligne (il peut tout de même y avoir des entités anonymes).
 
 ### RDFS
 
