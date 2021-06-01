@@ -51,9 +51,42 @@ Ne pas se reposer sur des experts lors de l'élaboration d'une ontologie, c'est 
 
 Ci dessous, nous passons en revue les éléments principaux d'une ontologie.
 
-## Entités, relations
+## Vocabulaire
+
+Une ontologie modélise un univers $$\Omega$$ qui est un sous-ensemble du monde observable, et où il est possible de manipuler ses entités constitutives pour opérer des raisonnements logiques, à travers un graphe $$\mathcal{G}=(V,E)$$.
+
+Ces "entités constitutives" se décomposent en deux types principaux : les **classes** $$V$$ qui sont les objets, les éléments dont on veut parler (*e.g.* arbre, feuille, racine) et les **propriétés** $$E$$ qui expriment les relations qui existent entre les classes (*e.g.* un arbre est une (`subClassOf`) plante).
+
+Dans l'image précédente de l'ontologie *FOAF*, les classes sont représentées par les cercles bleues, et les relations par les flêches labélisées avec des encart rectangulaire.
+
+{% hint style="info" %}
+Le point de départ d'une propriété s'appelle le **domaine**, et le point d'arrivé la **portée**. C'est élément sont descriptifs de la propriété et c'est ce qui lui donne tout son sens ! Par exemple, une relation $$\text{isSeekingNutrient} : \text{Racine} \mapsto \text{Nutrient}$$ indique que tout ce qui est une racine à une propriété allant dans nutriment (qui est un ensemble constitué des classes Azotes, Potassium, etc.).
+{% endhint %}
+
+On remarque également des propriétés avec des encarts verts pointant vers des cases oranges. Ces propriétés sont des "propriétés de données" (Data property) qui permettent d'expliciter des caractéristiques d'une classe (par exemple `firstName`) *via* l'utilisation de littéraux (les boites oranges).
 
 ## A-BOX vs T-BOX
+
+Vous pouvez être en train de vous demander au vue du discours précédent comment différencier les concepts que l'on souhaite modéliser (*e.g.* le concept d'arbre), et la modélisation de l'observation d'un **individu spécifique** de cette classe (*e.g.* l'arbre dans votre jardin).
+
+Les ontologies, grossièrement, sont découpée en deux parties pour permettre cela : une partie "conceptuelle", appelée **T-Box** (pour terminological component) et une partie "faits", appelée **A-Box** (pour assertion component), pour modéliser les instances des classes.
+
+### Terminological component
+
+En un sens, la **T-Box** représente les règles de votre modélisation. C'est ici que tous les concepts sont décrits : les classes et les propriétés de ces classes. Toutes les descriptions y sont donc génériques.
+
+{% hint style="warning" %}
+Les descriptions y sont peut être génériques, mais elles peuvent être très précises aussi. Le tout est de **ne pas parler d'instances spécifiques** dans cette partie. Par exemple, décrire l'écorce de *Eucalyptus deglupta* dans les "grande lignes" ne pose pas de soucis, même si elle est très atypique, puisqu'elle est commune à toute l'espèce.
+{% endhint %}
+
+*Exemple :*
+> ```
+> Tous les Étudiants sont des Personnes
+> ```
+> 
+> ```
+> Il y a deux types de personnes : des XX (Femme) et des XY (Homme).
+> ```
 
 ### Assertion component
 
@@ -65,12 +98,9 @@ A est un B
 Bob est un Homme
 ```
 
-### Terminological component
+Concrètement, cela permet de raisonner
 
-Tous les Étudiants sont des Personnes
-
-Il y a deux types de personnes : des XX (Femme) et des XY (Homme).
-
+C'est cependant uniquement $$\text{T-Box} \cup \text{A-Box} = \Omega$$.
 
 ## Spécialisation des propriétés
 
