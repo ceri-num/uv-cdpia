@@ -8,7 +8,7 @@ Soyez attentif, on pratiquera sur les ontologies dans la section de [Mise en pra
 
 L'ontologie, quelque soit le contexte dans lequel on la considère est un concept complexe à assimiler. On retrouve initialement le concept d'ontologie en philosophie, qui se définit comme :
 
-> Partie de la philosophie qui a pour objet l'étude des propriétés les plus générales de l'être, telles que l'existence, la possibilité, la durée, le devenir. [CNRTL](https://www.cnrtl.fr/lexicographie/ontologie)
+> Partie de la philosophie qui a pour objet l'étude des propriétés les plus générales de l'être, telles que l'existence, la possibilité, la durée, le devenir. [[CNRTL]](https://www.cnrtl.fr/lexicographie/ontologie)
 
 En informatique, la notion d'ontologie change quelque peut. Elle conserve sont caractère descriptif afin de capter les interrelations qui existent au sein d'une sous-partie d'un monde observé ; mais elle introduit surtout une notion forte de modélisation des éléments qui constituent ces interrelations : les "objets" et les "relations" qu'ils ont.
 
@@ -24,19 +24,19 @@ Mais c'est également une taxonomie enrichie de relations logiques complexes qui
 On peut en effet faire de l'"héritage" sur les relations également ! Par exemple dire que `hasVeryGoodFriend(x,y)` "hérite" de `hasFriend(x,y)`.
 {% endhint %}
 
-{% hint style="info" %}
+{% hint style="warning" %}
 On ne parle pas d'héritage, mais de subsomption ici.
 {% endhint %}
 
-Parmi ce concept existe les **ontologies pour le web sémantique**. Il s'agit d'un type d'ontologie particulier qui s'intéresse principalement à la cohérence logique et l'expressivité des éléments décrits pour **permettre le raisonnement automatique**. Pour cela, les langages de description de ces ontologies utilisent la [logique de premier ordre](fol.md) pour modéliser l'univers $$\Omega$$ qui nous intéresse. Conséquemment, les ontologies permettent de simuler le processus cognitif humain, ce qui les rend très pratiques pour les incorporer dans des processus d'IA où l'explicabilité et des relations complexes sont de mises.
+Parmi ce concept d'ontologie existe les **ontologies pour le web sémantique**. Il s'agit d'un type d'ontologie particulier qui s'intéresse principalement à la cohérence logique et l'expressivité des éléments décrits pour **permettre le raisonnement automatique**. Pour cela, les langages de description de ces ontologies utilisent la [logique de premier ordre](fol.md) pour modéliser l'univers $$\Omega$$ qui nous intéresse. Conséquemment, les ontologies permettent de simuler le processus cognitif humain, ce qui les rend très pratiques pour les incorporer dans des processus d'IA où l'explicabilité et les relations complexes sont de mises.
 
 {% hint style="info" %}
-Dans la suite, par le terme ontologie, on fera référence aux ontologies du web sémantiques.
+Dans la suite, par le terme **ontologie**, on fera référence aux ontologies du web sémantiques.
 {% endhint %}
 
 ![Visualisation de l'ontologie Friend of a Friend (FOAF) grâce à WEBVOWL](assets/foaf_vowl.png)
 
-Les étapes classiques pour l'élaboration d'une ontologie, d'après [Powell, 2015](../REF.md/#powell2015) :
+Élaborer un ontologie requiert **une connaissance experte du domaine** afin d'en saisir toutes les subtilités. C'est une étape complexe, qui doit être méthodiquement effectuer. En ce ses, [Powell, 2015](../REF.md/#powell2015) propose des étapes classiques pour l'élaboration d'une ontologie :
 
 1. Identifier votre **taxonomie** -- quels sont les éléments, les sous-éléments...
 2. Quels éléments **non pas de relation** avec d'autres ?
@@ -44,6 +44,12 @@ Les étapes classiques pour l'élaboration d'une ontologie, d'après [Powell, 20
 4. Quels sont les **caractéristiques uniques** définissant un individu ?
 5. Quels sont les **caractéristiques mesurables** d'un élément ?
 6. Quels éléments sont **décrit par** l'entremise d'**autres éléments** ?
+
+{% hint style="danger" %}
+Ne pas se reposer sur des experts lors de l'élaboration d'une ontologie, c'est prendre le risque d'introduire un fossé sémantique entre votre modélisation et la "réalité terrain", qui peut se traduire par la non-adoption de l'ontologie ou pire, à des raisonnements faux !
+{% endhint %}
+
+Ci dessous, nous passons en revue les éléments principaux d'une ontologie.
 
 ## Entités, relations
 
