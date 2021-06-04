@@ -23,6 +23,19 @@ Il s'agit d'une introduction à la RO, et non pas une formation. *Operations Res
 
 La RO est vaste, et s'interlace facilement avec d'autres disciplines pour renforcer la compréhension du problème et extraire des solutions pertinentes. On peut grossièrement catégoriser où intervient la RO.
 
+### Intuition
+Pour bien voir l'utilité de la RO, rien de mieux qu'un (classique) exemple du *Traveling Sales Man Problem* (voyageur de commerce).
+
+Notre objectif, c'est, en partant d'une certaine ville $$v$$, de parcourir toutes les villes sur notre fiche de route en faisant **la tournée la plus courte**.
+
+![Les villes sur notre fiche de route, d'après N. Brauner](assets/tsp_no_link.png)
+
+Pour résoudre se problème, autrement dit trouver une affectation des variables (*i.e.* l'ordre des villes) qui soit optimal, on va dresser une matrice de distance pour chacune des villes.
+
+![La solution optimale de notre recherche, d'après N. Brauner](assets/tsp_w_link.png)
+
+([Source des images](https://pagesperso.g-scop.grenoble-inp.fr/~braunern/RO.pdf))
+
 ### Combinatoire
 Un problème est dit combinatoire lorsque l'espace des assignements des variables qui le compose est grand, et où parmi ces assignements on cherche une solution soit optimale, soit proche de l'optimum. Autrement dit, il est nécessaire d'explorer une grande partie de l'espace pour s'assurer que la solution trouvée est (très) bonne, voire est la meilleure.
 
@@ -40,12 +53,6 @@ Bien souvent, un problème ne se résume pas à un seul acteur : les termes ne d
 
 *Exemple : *
 > Maintenant que vous avez pignons sur rue, vous allez devoir fixer le prix de vente de vos produits. Problème, ce prix va dépendre de vos concurrents, mais votre objectif est de maximiser vos gains. Quel sera le comportement des autres acteurs lorsque vous choisirez une ligne tarifaire, etc.
-
-### Dernier Exemple
-Un exemple classique que l'on utilise souvent est celui du *Traveling Sales Man Problem*.
-
-
-Mais aussi minimiser les pertes sur une chaîne de production tout en maximisant le nombre de pièces à l'heure.
 
 ## Quelques outils
 
