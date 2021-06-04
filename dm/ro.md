@@ -117,5 +117,5 @@ Conséquemment, ces algorithmes approximent les optimums du problème, sans pour
 ![Exemple d'une approche par métaheuristique. Source Wikipedia](assets/metaheuristique.png)
 
 {% hint style="danger" %}
-Ce type d'approche à tendance à tomber dans le piège d'optimaux locaux, c'est à dire de trouver une solution qui est bien meilleure que ses voisines et ne plus en sortir. Vous en avez un exemple sur l'image précédente.
+Ce type d'approche à tendance à tomber dans le piège des optimaux locaux, c'est à dire de trouver une solution qui est bien meilleure que ses voisines et ne plus en sortir, alors que ce n'est pas la meilleure pour le problème. Sortir de tels optimaux locaux est un défi de taille dans ces approches. Vous en avez un exemple sur l'image précédente.
 {% endhint %}
