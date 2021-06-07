@@ -6,13 +6,13 @@
 
 ## Aide à la décision ( *Decision Making | DM*)
 
-* [Introduction](dm/intro.md)
+* [Introduction](dm/intro_dm.md)
 * [Recherche Opérationnelle](dm/ro.md)
 * [DM sourcée par les traces](dm/la.md)
 
 ## Ingénierie des connaissances ( *Knowledge Engineering | KE*)
 
-* [Introduction](ke/intro.md)
+* [Introduction](ke/intro_ke.md)
 * [Logique propositionnelle](ke/zol.md)
 * [Logique des prédicats](ke/fol.md)
 * [Logique flou](ke/fzl.md)
@@ -22,7 +22,7 @@
 
 ## KE x DM : vers des systèmes de connaissances résilients
 
-* [Introduction](ke-x-dm/intro.md)
+* [Introduction](ke-x-dm/intro_kexdm.md)
 * [Case Based Reasoning](ke-x-dm/cbr.md)
 * [Kernel Trace Based System](ke-x-dm/ktbs.md)
 * [Approximation Sémantique](ke-x-dm/approx.md)
