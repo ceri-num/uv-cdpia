@@ -14,3 +14,6 @@ Olivier Corby, Rose Dieng-Kuntz, Catherine Faron Zucker, Fabien Gandon. Searchin
 
 # Lebis19
 Alexis Lebis, Capitaliser les processus d’analyse de traces d’apprentissage : modélisation ontologique et assistance à la réutilisation, Thèses, Sorbonne Université, May 2019.
+
+# Vermeulen18
+Mathieu Vermeulen. Une approche meta-design des learning games pour developper leur usage.. En-vironnements Informatiques pour l’Apprentissage Humain. Sorbonne Université, Faculté des Scienceset Ingénierie, 2018. Français.
