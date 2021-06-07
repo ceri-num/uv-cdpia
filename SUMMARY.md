@@ -2,7 +2,8 @@
 
 ## Introduction
 
-* [Présentation](intro/intro.md)
+* [IntroToDel](intro/intro.md)
+* [Présentation](intro/pres.md)
 
 ## Aide à la décision ( *Decision Making | DM*)
 
