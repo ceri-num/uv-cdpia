@@ -1,3 +1,0 @@
-ktbs.md
-
-algo gen ?
