@@ -43,6 +43,10 @@ Ces analyses peuvent être plus ou moins complexes, et se manifester sous diffé
 
 C'est une tâche complexe, qui nécessite de comprendre convenablement la situation analysée, les outils déployés et leur limites. L'objectif ici est de produire des connaissances activables.
 
+{% hint style="danger" %}
+Il n'existe pas de processus d'analyse tout fait qui peut être réutilisé en l'état. Par essence, un processus est dépendant des données sur lesquelles il a été bâti. Néanmoins, il est possible d'identifier les parties "à risque" pour pouvoir le réutiliser dans d'autres contextes.
+{% endhint %}
+
 ### Visualisation
 
 Bien communiquer les résultats d'une analyse est essentiel pour permettre aux utilisateurs de prendre une décision correcte. Cette communication, bien souvent, est relayée uniquement par une visualisation de la métrique et/ou la différence avec l'attendu. Or, elle est plus ou moins claire, et dépendante du contexte social-culturel-domaine dans lequel elle est utilisée et de l'information qu'on souhaite afficher.
@@ -63,7 +67,7 @@ Ce sont les indicateurs qui constituent les éléments principaux d'aide à la d
 
 ## Tableaux de bord (*Dashboard*)
 
-> Un tableau de bord est une vue à la fois activable **et** synthétique de connaissances activables consolidées (*i.e.* données analysées et post-traitées : indicateurs) afin de fournir les outils nécessaires à la compréhension d'une situation particulière et permettre une aide à la décision.
+> Un tableau de bord est une vue à la fois activable, synthétique et consolidée de connaissances activables (*i.e.* données analysées et post-traitées : indicateurs) afin de fournir les outils nécessaires à la compréhension d'une situation particulière et permettre une aide à la décision. (Moi, 2021)
 
 Élaborer un tableau de bord est une tâche complexe. En plus de devoir correctement travailler la sémantique des indicateurs de manière individuelle, dans le cas du tableau de bord, il faut être capable de prendre du recule, et de s'assurer que la combinaison de plusieurs indicateurs reste compréhensible et ne perverti pas leur sémantique initiale.
 
