@@ -1,1 +1,3 @@
-citer passage dans aussenac charlet reynaud \cite{aussenacgilles:hal-03104862}
+intro.md
+
+\cite{aussenacgilles:hal-03104862}
