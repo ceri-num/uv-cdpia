@@ -1,5 +1,7 @@
 # Table des matières
 
+* [Ingénierie des Connaissances et Aide à la Décision](outline.md)
+
 ## Introduction
 
 * [Présentation](intro/pres.md)
