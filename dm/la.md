@@ -1,5 +1,7 @@
 # Aide à la décision sourcée par la donnée
 
+## Introduction
+
 Une autre approche qui a émergé ces dernières années dans l'aide à la décision est le traitement automatisé des données produites par les utilisateurs pour identifier des comportements, des modèles et des connaissances. C'est une fois analysées que ces données prennent tout leur sens et peuvent entrer dans des systèmes de recommendation, d'explication, de navigation... L'on utilise souvent des représentation visuelle et/ou quantifier pour les représenter - qu'on appelle **indicateur**.
 
 Dans cette section, nous allons regarder cela du point de vue du domaine des Environnement Informatique pour l'Apprentissage Humain (EIAH) et des Learning Analytics.
